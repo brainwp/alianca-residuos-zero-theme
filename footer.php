@@ -12,12 +12,29 @@
 
 		</div><!-- #main -->
 
-		<footer id="footer" role="contentinfo">
-			<div class="site-info">
-				<span>&copy; <?php echo date( 'Y' ); ?> <a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a> - <?php _e( 'All rights reserved', 'odin' ); ?> | <?php echo sprintf( __( 'Powered by the <a href="%s" rel="nofollow" target="_blank">Odin</a> forces and <a href="%s" rel="nofollow" target="_blank">WordPress</a>.', 'odin' ), 'http://wpod.in/', 'http://wordpress.org/' ); ?></span>
-			</div><!-- .site-info -->
-		</footer><!-- #footer -->
 	</div><!-- .container -->
+
+	<footer id="footer" role="contentinfo">
+
+		<div class="container">
+
+			<div class="col-md-8 site-info">
+				<a class="site-name" href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a>
+				<span class="desc"><?php echo get_bloginfo( 'description' ); ?></span>
+				<?php if ( $endereco = get_option( 'endereco' ) ): ?>
+					<?php echo $endereco; ?>
+					<?php if ( $telefone = get_option( 'telefone' ) ): ?>
+					 	<?php echo " - Tel. " . $telefone; ?>
+					 <?php endif ?>
+				<?php endif ?>
+			</div><!-- .site-info -->
+			<div class="col-md-4">
+				<a href="http://brasa.art.br/" target="_blank"><span class="brasa"></span></a><span class="copy">Todos os Direitos Reservados &copy;</span>
+			</div>
+
+		</div><!-- .container -->
+
+	</footer><!-- #footer -->
 
 	<?php wp_footer(); ?>
 </body>

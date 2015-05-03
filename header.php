@@ -22,10 +22,13 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+	<div class="col-md-12 bg-menu"></div>
+
 	<div class="container">
 		<header id="header" role="banner">
 
-			<nav id="main-navigation" class="navbar navbar-default" role="navigation">
+			<nav id="main-navigation" class="navbar navbar-top" role="navigation">
 				<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'odin' ); ?>"><?php _e( 'Skip to content', 'odin' ); ?></a>
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-navigation">

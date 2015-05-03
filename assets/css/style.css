@@ -23,7 +23,38 @@ a:active {
     text-decoration: none;
 }
 body {
-	background: url('../images/bg.jpg') center center fixed #f4f4f4;
+	background: url( '../images/bg.jpg' ) center center fixed #f4f4f4;
+}
+/* Header */
+.bg-menu {
+	background-color: #327E36;
+	height: 55px;
+	display: block;
+	position: absolute;
+	top: 0
+}
+.navbar-nav > li > a {
+	color: #FFF;
+    text-decoration: none;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+	color: #FFF;
+    text-decoration: none;
+    background-color: #15641A;
+}
+#header .navbar-form .form-control {
+	height: 25px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+}
+#header .btn.btn-default {
+	background: url( '../images/lupa.png' ) center center no-repeat transparent;
+	border: none;
+	text-indent: -999999px;
+}
+body.logged-in .bg-menu {
+	margin-top: 30px;
 }
 /* Home */
 h1.site-title {
@@ -82,7 +113,6 @@ ul.about-nav li a:hover {
 .rede .thumb {
 	padding-top: 22px;
 }
-
 .rede .mais {
 	background-color: #338B38;
 	color: #FFF;
@@ -95,4 +125,86 @@ ul.about-nav li a:hover {
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	transition: background-color 0.2s ease;
+}
+.rede .mais:hover {
+	background-color: #15641A;
+}
+
+/* Pre Footer */
+.atuacao {
+	background: url( '../images/bg-atuacao.jpg' ) center bottom fixed #f4f4f4;
+	background-size: 100%;
+	height: 600px;
+	margin-top: 30px;
+}
+.atuacao h2 {
+	color: #FFF;
+	font-weight: bolder;
+	margin-bottom: 30px;
+	margin-left: 50px;
+	margin-top: 75px;
+	text-decoration: underline;
+	text-transform: uppercase;
+}
+.atuacao .btn {
+	background-color: #338B38;
+	clear: both;
+	color: #FFF;
+	display: block;
+	float: none;
+	margin: 40px auto 0 auto;
+	padding: 10px 10px;
+	text-transform: uppercase;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	transition: background-color 0.2s ease;
+}
+.atuacao .btn:hover {
+	background-color: #15641A;
+}
+.atuacao .aba {
+	background: #FFF;
+	clear: both;
+	display: block;
+	overflow: hidden;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+/* #Footer */
+#footer {
+	background: url( '../images/bg-footer.jpg' ) center bottom no-repeat #20590C;
+	border-top: none;
+	color: #FFF;
+	margin-top: 0;
+	padding-bottom: 30px;
+	padding-top: 30px;
+	text-align: left;
+}
+#footer span.desc {
+	font-size: 0.9em;
+}
+#footer a.site-name {
+	color: #fff;
+	display: block;
+	font-size: 1.1em;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	width: 100%;
+}
+#footer .copy {
+	float: right;
+	margin-top: 18px;
+	margin-right: 20px;
+}
+#footer .brasa {
+	background: url( '../images/brasa.png' ) center center no-repeat transparent;
+	display: block;
+	float: right;
+	height: 40px;
+	width: 60px;
 }

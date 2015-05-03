@@ -45,7 +45,9 @@ get_header(); ?>
 				<?php $rede = get_page_by_path( 'rede-internacional', OBJECT, 'page' ); ?>
 				<?php if ( $rede ): ?>
 					<div class="col-md-4 thumb">
-						<?php echo get_the_post_thumbnail( $rede->ID, 'medium' ); ?>
+						<a href="<?php echo get_permalink( $rede->ID ); ?>">
+							<?php echo get_the_post_thumbnail( $rede->ID, 'medium' ); ?>
+						</a>
 					</div><!-- .thumb -->
 					<div class="col-md-8 desc">
 						<h2><?php echo $rede->post_title; ?></h2>
@@ -57,6 +59,8 @@ get_header(); ?>
 
 		</main><!-- #content -->
 	</div><!-- #primary -->
+
+	<?php get_template_part( 'pre', 'footer' ); ?>
 
 <?php
 get_footer();
