@@ -37,9 +37,23 @@ get_header(); ?>
 						<div class="border"></div>
 						<h2><?php echo $conceito->post_title; ?></h2>
 						<span><?php echo get_excerpt( $conceito->post_content, '450', ' ...' ); ?></span>
-					</div><!-- conceito -->
+					</div><!-- .desc -->
 				<?php endif ?>
-			</div><!-- conceito -->
+			</div><!-- .conceito -->
+
+			<div class="col-md-8 rede">
+				<?php $rede = get_page_by_path( 'rede-internacional', OBJECT, 'page' ); ?>
+				<?php if ( $rede ): ?>
+					<div class="col-md-4 thumb">
+						<?php echo get_the_post_thumbnail( $rede->ID, 'medium' ); ?>
+					</div><!-- .thumb -->
+					<div class="col-md-8 desc">
+						<h2><?php echo $rede->post_title; ?></h2>
+						<span><?php echo get_excerpt( $rede->post_content, '400', ' ...' ); ?></span>
+						<a href="<?php echo get_permalink( $rede->ID ); ?>" class="mais">Leia mais</a>
+					</div><!-- rede -->
+				<?php endif ?>
+			</div><!-- .rede -->
 
 		</main><!-- #content -->
 	</div><!-- #primary -->
