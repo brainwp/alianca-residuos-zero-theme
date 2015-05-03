@@ -308,3 +308,9 @@ if ( is_woocommerce_activated() ) {
 	require get_template_directory() . '/inc/woocommerce/functions.php';
 	require get_template_directory() . '/inc/woocommerce/template-tags.php'; 
 }
+
+/**
+ * ACF and fields.
+ */
+require_once get_template_directory() . '/inc/acf/acf.php';
+require_once get_template_directory() . '/inc/fields.php';
