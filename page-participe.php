@@ -1,6 +1,7 @@
 <?php
 /**
  * The template for displaying all pages.
+ * Template Name: With Participe
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages and that other
@@ -23,11 +24,6 @@ get_header(); ?>
 
 					// Include the page content template.
 					get_template_part( 'content', 'page' );
-
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
 				endwhile;
 			?>
 
@@ -35,4 +31,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
+get_template_part( 'parts/participe' );
 get_footer();

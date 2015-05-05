@@ -258,6 +258,10 @@ body.page-template-noticias {
 	padding-bottom: 30px;
 }
 
+/* Page */
+body.page {
+	background: url( '../images/bg-noticias.jpg' ) repeat-x center top #dacf93;
+}
 /* #Footer */
 .sub-footer.participe {
 	background: url( '../images/bg-participe.jpg' ) #FFF;
