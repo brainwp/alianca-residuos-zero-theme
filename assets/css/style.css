@@ -199,7 +199,7 @@ ul.about-nav li a:hover {
 
 /* Noícias */
 body.page-template-noticias {
-	background: url( '../images/bg-noticias.jpg' ) center top #dacf93;
+	background: url( '../images/bg-noticias.jpg' ) repeat-x center top #dacf93;
 }
 .noticias-title {
 	color: #496849;
