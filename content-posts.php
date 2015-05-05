@@ -16,6 +16,10 @@
 			<div class="col-md-4 thumb">
 				<?php the_post_thumbnail( 'noticias-thumbnail' ); ?>
 			</div><!-- thumb -->
+		<?php else: ?>
+			<div class="col-md-4 thumb">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/noticias-default.jpg" alt="<?php the_title(); ?>">
+			</div><!-- thumb -->
 		<?php endif ?>
 
 		<div class="col-md-8 desc">
