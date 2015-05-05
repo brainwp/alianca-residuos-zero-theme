@@ -280,12 +280,17 @@ body.page-template-noticias {
 	position: relative;
 	width: 90%;
 }
+.sub-footer.participe h1.site-title {
+	font-weight: 500;
+	margin-top: 30px;
+}
 .sub-footer.participe .agenda {
 	margin-top: 15px;
 }
 .sub-footer.participe .agenda .each {
 	background-color: #FFF;
 	margin-bottom: 20px;
+	padding-left: 0 !important;
 }
 .sub-footer.participe .agenda span {
 	display: block;
