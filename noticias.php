@@ -6,8 +6,10 @@
 
 get_header(); ?>
 
-	<div id="primary" class="<?php echo odin_classes_page_sidebar(); ?>">
-		<main id="main-content" class="site-main" role="main">
+	<h1 class="noticias-title"><?php _e( 'Notícias', 'odin' ); ?></h1>
+
+	<div id="primary" class="col-md-12">
+		<main id="main-content" class="site-main noticias" role="main">
 
 			<?php
 				$noticias = new WP_Query('posts_per_page=10');

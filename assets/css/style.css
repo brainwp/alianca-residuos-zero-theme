@@ -175,6 +175,62 @@ ul.about-nav li a:hover {
 	border-radius: 5px;
 }
 
+/* Noícias */
+body.page-template-noticias {
+	background: url( '../images/bg-noticias.jpg' ) center top #dacf93;
+}
+.noticias-title {
+	color: #338B38;
+	text-transform: uppercase;
+	text-align: center;
+	width: 100%;
+}
+.noticias .each {
+	background-color: #FFF;
+	margin-bottom: 30px;
+	max-height: 280px;
+	overflow: hidden;
+}
+.noticias .each .desc {
+	color: #666;
+	padding-bottom: 20px;
+	padding-right: 45px;
+	padding-top: 20px;
+	position: relative;
+}
+.noticias .each .desc .fadein {
+	background: url( '../images/bg-fade-noticias.png' ) center bottom;
+	height: 90%;
+	overflow: hidden;
+	position: absolute;
+	width: 95%;
+}
+.noticias .each .meta {
+	color: #888;
+	font-size: 0.8em;
+}
+.noticias .each h2 {
+	margin-top: 10px;
+	text-transform: uppercase;
+}
+.noticias .each .mais {
+	background-color: #338B38;
+	bottom: 0px;
+	color: #FFF;
+	right: 45px;
+	padding: 3px 10px;
+	text-transform: uppercase;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	transition: background-color 0.2s ease;
+	position: absolute;
+	z-index: 999999;
+}
+.noticias .each .mais:hover {
+	background-color: #15641A;
+}
+
 /* #Footer */
 #footer {
 	background: url( '../images/bg-footer.jpg' ) center bottom no-repeat #20590C;

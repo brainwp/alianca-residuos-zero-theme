@@ -9,32 +9,22 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php		
-			the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
-		?>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'each' ); ?>>
+	
+	<div class="row">
+		<?php if (has_post_thumbnail()): ?>
+			<div class="col-md-4 thumb">
+				<?php the_post_thumbnail( 'noticias-thumbnail' ); ?>
+			</div><!-- thumb -->
+		<?php endif ?>
 
-		<?php if ( 'post' == get_post_type() ) : ?>
-			<div class="entry-meta">
-				<?php odin_posted_on(); ?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+		<div class="col-md-8 desc">
+			<div class="fadein"></div>
+			<span class="meta"><?php odin_posted_on(); ?></span><!-- .meta -->
+			<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+			<?php echo get_excerpt( get_the_content(), '700', ' ...' ); ?>
+			<a href="<?php echo get_permalink( $rede->ID ); ?>" class="mais">Leia mais</a>
+		</div><!-- desc -->
+	</div>
 
-	<div class="entry-content">
-		<?php
-			the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'odin' ) );
-			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'odin' ) . '</span>',
-				'after'       => '</div>',
-				'link_before' => '<span>',
-				'link_after'  => '</span>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-meta">
-		<a href="<?php the_permalink(); ?>">Leia Mais</a>
-	</footer>
 </article><!-- #post-## -->
