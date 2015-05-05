@@ -9,17 +9,17 @@ a {
 	transition: color 0.2s ease;
 }
 a:link {
-    color: #338B38;
+    color: #496849;
 }
 a:visited {
-    color: #338B38;
+    color: #496849;
 }
 a:hover {
-    color: #15641A;
+    color: #344934;
     text-decoration: none;
 }
 a:active {
-    color: #15641A;
+    color: #344934;
     text-decoration: none;
 }
 body {
@@ -27,11 +27,14 @@ body {
 }
 /* Header */
 .bg-menu {
-	background-color: #327E36;
+	background-color: #496849;
 	height: 55px;
 	display: block;
 	position: absolute;
 	top: 0
+}
+.navbar {
+	margin-bottom: 0;
 }
 .navbar-nav > li > a {
 	color: #FFF;
@@ -40,7 +43,7 @@ body {
 .nav > li > a:hover, .nav > li > a:focus {
 	color: #FFF;
     text-decoration: none;
-    background-color: #15641A;
+    background-color: #344934;
 }
 #header .navbar-form .form-control {
 	height: 25px;
@@ -56,13 +59,32 @@ body {
 body.logged-in .bg-menu {
 	margin-top: 30px;
 }
-/* Home */
 h1.site-title {
 	display: block;
 	font-weight: bolder;
 	text-align: center;
 	width: 100%;
 }
+.sub-header {
+	background-color: #F0F0F0;
+	overflow: hidden;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	text-align: center;
+}
+.sub-header img {
+	margin: 15px auto 0 auto;
+	max-width: 95%;
+}
+.sub-header .btn.conceito {
+	background: url( '../images/bg-btn-conceito.jpg' ) center bottom no-repeat;
+	float: right;
+	margin-bottom: 3px;
+	margin-top: -5px;
+	padding: 3px 30px 35px 30px;
+	text-transform: uppercase;
+}
+/* Home */
 .conceito {
 	float: none;
 	margin: 0 auto;
@@ -76,7 +98,7 @@ ul.about-nav li {
 	width: 100%;
 }
 ul.about-nav li a {
-	background-color: #338B38;
+	background-color: #496849;
 	color: #FFF;
 	margin-bottom: 3px;
 	margin-top: 3px;
@@ -88,14 +110,14 @@ ul.about-nav li a {
 	transition: background-color 0.2s ease;
 }
 ul.about-nav li a:hover {
-	background-color: #15641A;
+	background-color: #344934;
 	color: #FFF;
 }
 .conceito .desc h2 {
 	text-transform: uppercase;
 }
 .conceito .desc .border {
-	background-color: #338B38;
+	background-color: #496849;
 	height: 3px;
 	margin-top: 40px;
 	overflow: hidden;
@@ -114,7 +136,7 @@ ul.about-nav li a:hover {
 	padding-top: 22px;
 }
 .rede .mais {
-	background-color: #338B38;
+	background-color: #496849;
 	color: #FFF;
 	float: right;
 	margin-bottom: 3px;
@@ -127,7 +149,7 @@ ul.about-nav li a:hover {
 	transition: background-color 0.2s ease;
 }
 .rede .mais:hover {
-	background-color: #15641A;
+	background-color: #344934;
 }
 
 /* Pre Footer */
@@ -147,7 +169,7 @@ ul.about-nav li a:hover {
 	text-transform: uppercase;
 }
 .atuacao .btn {
-	background-color: #338B38;
+	background-color: #496849;
 	clear: both;
 	color: #FFF;
 	display: block;
@@ -161,7 +183,7 @@ ul.about-nav li a:hover {
 	transition: background-color 0.2s ease;
 }
 .atuacao .btn:hover {
-	background-color: #15641A;
+	background-color: #344934;
 }
 .atuacao .aba {
 	background: #FFF;
@@ -180,7 +202,9 @@ body.page-template-noticias {
 	background: url( '../images/bg-noticias.jpg' ) center top #dacf93;
 }
 .noticias-title {
-	color: #338B38;
+	color: #496849;
+	padding-bottom: 30px;
+	padding-top: 30px;
 	text-transform: uppercase;
 	text-align: center;
 	width: 100%;
@@ -214,7 +238,7 @@ body.page-template-noticias {
 	text-transform: uppercase;
 }
 .noticias .each .mais {
-	background-color: #338B38;
+	background-color: #496849;
 	bottom: 0px;
 	color: #FFF;
 	right: 45px;
@@ -232,6 +256,26 @@ body.page-template-noticias {
 }
 
 /* #Footer */
+.sub-footer.participe {
+	background: #FFF;
+	width: 100%;
+}
+.sub-footer.participe h1 {
+	text-transform: uppercase;
+}
+.sub-footer.participe .btns {
+	overflow: hidden;
+}
+.sub-footer.participe .btns .comunidade {
+	background: url( '../images/btn-comunidade.jpg' ) center bottom no-repeat #20590C;
+	display: block;
+	height: 100%;
+	margin: 0 auto;
+	max-height: 180px;
+	overflow: hidden;
+	position: relative;
+	width: 90%;
+}
 #footer {
 	background: url( '../images/bg-footer.jpg' ) center bottom no-repeat #20590C;
 	border-top: none;

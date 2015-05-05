@@ -85,8 +85,22 @@
 				<h1 class="site-title"><a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
 			<?php else : ?>
-				<div class="site-title h1"><a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-				<div class="site-description h2"><?php bloginfo( 'description' ); ?></div>
+
+				</div><!-- .container -->
+
+					<div class="sub-header">
+
+						<div class="container">
+
+							<a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-internas.jpg" alt="<?php bloginfo( 'name' ); ?>"></a>
+							<a href="<?php echo home_url( '/o-conceito' ); ?>" class="btn conceito"><?php _e( 'Entenda o Conceito', 'odin' ); ?></a>
+
+						</div><!-- .container -->
+					
+					</div><!-- sub-header -->
+
+				<div class="container">
+
 			<?php endif ?>
 
 			

@@ -41,4 +41,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
+get_template_part( 'parts/participe' );
 get_footer();
