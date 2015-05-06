@@ -262,6 +262,22 @@ body.page-template-noticias {
 body.page {
 	background: url( '../images/bg-noticias.jpg' ) repeat-x center top #dacf93;
 }
+
+/* Biblioteca */
+body.post-type-archive-biblioteca {
+	background: url( '../images/bg-noticias.jpg' ) repeat-x center top #dacf93;
+}
+
+body.post-type-archive-biblioteca .each .content {
+	background-color: #FFF;
+	overflow: hidden;
+}
+body.post-type-archive-biblioteca .each .content .thumb {
+	max-height: 150px;
+	overflow: hidden;
+	width: 100%;
+}
+
 /* #Footer */
 .sub-footer.participe {
 	background: url( '../images/bg-participe.jpg' ) #FFF;
