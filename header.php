@@ -93,17 +93,22 @@
 						<div class="container">
 
 							<a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-internas.jpg" alt="<?php bloginfo( 'name' ); ?>"></a>
-							<a href="<?php echo home_url( '/o-conceito' ); ?>" class="btn conceito"><?php _e( 'Entenda o Conceito', 'odin' ); ?></a>
-
+							<a class="btn conceito" id="conceito-click" data-open="false"><?php _e( 'Entenda o Conceito', 'odin' ); ?></a>
+			                <?php $conceito = get_page_by_path( 'frentes-de-atuacao', OBJECT, 'page' ); ?>
+			                <?php if($conceito):?>
+			                    <div class="col-md-12" id="conceito-content">
+			                    	<?php echo apply_filters('the_content', $conceito->post_content); ?>
+			                    </div><!-- #conceito-content.col-md-12 -->
+			                <?php endif;?>
 						</div><!-- .container -->
-					
+
 					</div><!-- sub-header -->
 
 				<div class="container">
 
 			<?php endif ?>
 
-			
+
 
 		</header><!-- #header -->
 
