@@ -222,19 +222,15 @@ function odin_enqueue_scripts() {
 	wp_enqueue_script( 'jquery' );
 
 	// General scripts.
-	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
-		// Bootstrap.
-		wp_enqueue_script( 'bootstrap', $template_url . '/assets/js/libs/bootstrap.min.js', array(), null, true );
-		
-		// FitVids.
-		wp_enqueue_script( 'fitvids', $template_url . '/assets/js/libs/jquery.fitvids.js', array(), null, true );
+	// Bootstrap.
+	wp_enqueue_script( 'bootstrap', $template_url . '/assets/js/libs/bootstrap.min.js', array(), null, true );
+	wp_enqueue_script( 'bootstrap-tabs', $template_url . '/assets/js/bootstrap/tab.js', array(), null, true );
 
-		// Main jQuery.
-		wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array(), null, true );
-	} else {
-		// Grunt main file with Bootstrap, FitVids and others libs.
-		wp_enqueue_script( 'odin-main-min', $template_url . '/assets/js/main.min.js', array(), null, true );
-	}	
+	// FitVids.
+	wp_enqueue_script( 'fitvids', $template_url . '/assets/js/libs/jquery.fitvids.js', array(), null, true );
+
+	// Main jQuery.
+	wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array(), null, true );
 
 	// Grunt watch livereload in the browser.
 	// wp_enqueue_script( 'odin-livereload', 'http://localhost:35729/livereload.js?snipver=1', array(), null, true );
@@ -308,7 +304,7 @@ if ( is_woocommerce_activated() ) {
 	add_theme_support( 'woocommerce' );
 	require get_template_directory() . '/inc/woocommerce/hooks.php';
 	require get_template_directory() . '/inc/woocommerce/functions.php';
-	require get_template_directory() . '/inc/woocommerce/template-tags.php'; 
+	require get_template_directory() . '/inc/woocommerce/template-tags.php';
 }
 
 /**
@@ -335,7 +331,7 @@ require_once get_template_directory() . '/inc/fields.php';
  */
 
 function get_excerpt( $content = '', $limit = '', $after = '' ){
-	
+
 	if ( $limit ) {
 		$l = $limit;
 	} else {
@@ -347,14 +343,14 @@ function get_excerpt( $content = '', $limit = '', $after = '' ){
 	} else {
 		$excerpt = get_the_content();
 	}
- 
+
 	$excerpt = preg_replace( " (\[.*?\])",'',$excerpt );
 	$excerpt = strip_shortcodes( $excerpt );
 	$excerpt = strip_tags( $excerpt );
 	$excerpt = substr( $excerpt, 0, $l );
 	$excerpt = substr( $excerpt, 0, strripos($excerpt, " " ) );
 	$excerpt = trim( preg_replace( '/\s+/', ' ', $excerpt ) );
-	
+
 	if ( $after ) {
 		$a = $after;
 	} else {
