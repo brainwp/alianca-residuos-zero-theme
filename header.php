@@ -100,6 +100,11 @@
 			                    	<?php echo apply_filters('the_content', $conceito->post_content); ?>
 			                    </div><!-- #conceito-content.col-md-12 -->
 			                <?php endif;?>
+			                <?php if(is_page() && is_page_template('page-home-alternativa.php')): ?>
+			                    <div class="col-md-12" id="slider-novidades-container">
+			                    	<?php echo do_shortcode('[brasa_slider name="Novidades"]');?>
+			                    </div><!-- #slider-novidades.col-md-12 -->
+			                <?php endif;?>
 						</div><!-- .container -->
 
 					</div><!-- sub-header -->

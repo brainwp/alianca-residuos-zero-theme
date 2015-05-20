@@ -218,6 +218,8 @@ function odin_enqueue_scripts() {
 	// Loads Odin main stylesheet.
 	wp_enqueue_style( 'odin-style', get_stylesheet_uri(), array(), null, 'all' );
 
+	wp_enqueue_style( 'lato-google-font', 'http://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900,900italic', array(), null, 'all' );
+
 	// jQuery.
 	wp_enqueue_script( 'jquery' );
 
@@ -317,6 +319,41 @@ require_once get_template_directory() . '/inc/cpts.php';
  */
 require_once get_template_directory() . '/inc/acf/acf.php';
 require_once get_template_directory() . '/inc/fields.php';
+/**
+ * Kirki Customizer.
+ */
+require_once get_template_directory() . '/inc/customizer.php';
+/**
+ * Brasa Slider Novidades.
+ */
+function content_brasa_slider_loop_before_image($html){
+	global $brasa_slider_item_id;
+	if(get_post_type($brasa_slider_item_id) == 'attachment')
+		return $html;
+
+    $html .= '<div class="col-md-6 pull-left img-container">';
+    return $html;
+}
+add_filter('brasa_slider_loop_before_link_container','content_brasa_slider_loop_before_image');
+function content_brasa_slider_loop_after_image($html){
+	global $brasa_slider_item_id, $brasa_slider_id;
+	if(get_post_type($brasa_slider_item_id) == 'attachment')
+		return $html;
+
+	$html .= '</div>';
+    $html .= '<div class="col-md-6 pull-right text-container">';
+    $html .= '<a href="'.esc_url(get_post_meta($brasa_slider_id, 'brasa_slider_id'.$brasa_slider_item_id, true )).'">';
+    $slider_post = get_post($brasa_slider_item_id);
+    $html .= '<h3 class="slider-title">'.apply_filters('the_tite',$slider_post->post_title) . '</h3>';
+    $html .= apply_filters('the_content', get_excerpt($slider_post->post_content));
+    $html .= '<span class="btn btn-primary btn-leia">';
+    $html .= __('Leia Mais','odin');
+    $html .= '</span>';
+    $html .= '</a>';
+    $html .= '</div>';
+    return $html;
+}
+add_filter('brasa_slider_loop_after_image','content_brasa_slider_loop_after_image');
 
 /**
  * Function get_excerpt
