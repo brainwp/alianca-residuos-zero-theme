@@ -33,14 +33,14 @@
 				            <?php global $post;?>
 				            <?php if($i == 0): ?>
 				                <li role="presentation" class="active">
-				                	<a href="#<?php echo $post->post_name;?>" aria-controls="<?php echo $post->post_name;?>">
+				                	<a href="#<?php echo $post->post_name; ?>" aria-controls="<?php echo $post->post_name; ?>">
 				                		<?php the_title();?>
 				                	</a>
 				                </li>
 				            <?php endif; ?>
 				            <?php if($i > 0): ?>
 				                <li role="presentation">
-				                	<a href="#<?php echo $post->post_name;?>" aria-controls="<?php echo $post->post_name;?>">
+				                	<a href="#<?php echo $post->post_name; ?>" aria-controls="<?php echo $post->post_name; ?>">
 				                		<?php the_title();?>
 				                	</a>
 				                </li>
@@ -59,18 +59,29 @@
 				        	<?php global $post;?>
 				            <?php if($i == 0): ?>
 				                <div role="tabpanel" class="tab-pane col-md-12 active" id="<?php echo $post->post_name;?>">
-				                	<div class="col-md-4 image-container">
-				                		<?php the_post_thumbnail('medium');?>
-				                	</div><!-- .col-md-4 -->
-				                	<div class="col-md-8 pull-left content">
+
+					                	<?php if (has_post_thumbnail()): ?>
+
+						                	<div class="col-md-4 image-container">
+						                		<?php the_post_thumbnail( 'medium' );?>
+						                	</div><!-- .col-md-4 -->
+
+						                	<div class="col-md-8 pull-left content">
+
+						                <?php else: ?>
+
+						                	<div class="col-md-12 pull-left content">
+					                		
+					                	<?php endif ?>
+				                	
 				                		<?php the_content();?>
-				                	</div><!-- .col-md-8 pull-left content -->
+				                	</div><!-- .pull-left .content -->
 				                </div>
 				            <?php endif; ?>
 				            <?php if($i > 0): ?>
 				                <div role="tabpanel" class="tab-pane col-md-12" id="<?php echo $post->post_name;?>">
 				                	<div class="col-md-4 thumbnail">
-				                		<?php the_post_thumbnail('medium');?>
+				                		<?php the_post_thumbnail( 'medium' );?>
 				                	</div><!-- .col-md-4 -->
 				                	<div class="col-md-8 pull-left content">
 				                		<?php the_content();?>
