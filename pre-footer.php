@@ -80,12 +80,14 @@
 				            <?php endif; ?>
 				            <?php if($i > 0): ?>
 				                <div role="tabpanel" class="tab-pane col-md-12" id="<?php echo $post->post_name;?>">
+				                	
 				                	<div class="col-md-4 thumbnail">
 				                		<?php the_post_thumbnail( 'medium' );?>
 				                	</div><!-- .col-md-4 -->
 				                	<div class="col-md-8 pull-left content">
 				                		<?php the_content();?>
 				                	</div><!-- .col-md-8 pull-left content -->
+
 				                </div>
 				            <?php endif;?>
 				            <?php $i++;?>

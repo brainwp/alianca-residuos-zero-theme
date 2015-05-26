@@ -351,7 +351,8 @@ body.post-type-archive-biblioteca .each .content .thumb {
 
 /* #Footer */
 .sub-footer.participe {
-	background: url( '../images/bg-participe.jpg' ) #FFF;
+	background: url( '../images/bg-participe.jpg' ) center top #FFF;
+	overflow: hidden;
 	padding-bottom: 30px;
 	width: 100%;
 }
@@ -382,9 +383,18 @@ body.post-type-archive-biblioteca .each .content .thumb {
 	background-color: #FFF;
 	margin-bottom: 20px;
 	padding-left: 0 !important;
+	position: relative;
+}
+.sub-footer.participe .agenda h3 {
+	margin-bottom: 5px !important;
 }
 .sub-footer.participe .agenda span {
 	display: block;
+	font-size: 0.9em;
+}
+.sub-footer.participe .agenda span p {
+	color: #555;
+	margin-bottom: 5px;
 }
 .sub-footer.participe .data {
 	background-color: #49684A;
@@ -394,6 +404,8 @@ body.post-type-archive-biblioteca .each .content .thumb {
 	padding-top: 15px;
 	text-align: center;
 	width: 20%;
+	position: absolute;
+	height: 100%;
 }
 .sub-footer.participe .data span:first-child{
 	font-size: 2em;
@@ -403,10 +415,14 @@ body.post-type-archive-biblioteca .each .content .thumb {
 	float: left;
 	padding-left: 20px;
 	width: 70%;
+	margin-left: 20%;
 }
 .sub-footer.participe .infos h3 {
 	margin-bottom: 8px;
 	margin-top: 8px;
+}
+.sub-footer.participe .infos span:last-child {
+	margin-bottom: 15px;
 }
 .btns .link-comunidade {
 	background: url( '../images/btn-comunidade.jpg' ) center center no-repeat transparent;
@@ -519,7 +535,19 @@ section#acoes-section .section-title{
 section#acoes-section .section-content{
 	font-family: 'Lato',sans-serif;
 	color:#231f20;
+	margin-top: 50px;
+}
+section#acoes-section .img-container {
+	margin-top: 30px;
+}
+section#acoes-section .img-container div{
+	max-height: 170px;
+	overflow: hidden;
+	padding-left: 7px;
+	padding-right: 7px;
+	margin-bottom: 15px;
 }
 section#acoes-section .img-container img{
 	max-width: 100%;
 }
+

@@ -72,6 +72,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		 */
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'noticias-thumbnail', '360', '280', array( 'center', 'center' ) );
+		add_image_size( 'square_thumb', '400', '400', array( 'center', 'center' ) );
 
 		/**
 		 * Add feed link.
