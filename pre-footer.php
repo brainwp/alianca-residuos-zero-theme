@@ -98,7 +98,7 @@
 			</div>
 		    <?php endif;?>
 			<div class="clear"></div>
-			<a class="col-md-3 btn" href="<?php echo home_url( '/carta-de-intencao' ); ?>">Carta de Intenção</a>
+			<a class="col-md-3 btn" href="<?php echo home_url( '/carta-de-intencao' ); ?>">Quer aderir?</a>
 		</div><!-- container -->
 
 		</div><!-- atuacao -->

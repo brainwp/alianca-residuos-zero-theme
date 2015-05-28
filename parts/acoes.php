@@ -13,7 +13,7 @@
 					<?php $content = kirki_get_option('acoes_content');?>
 				    <?php echo apply_filters('the_content',$content);?>
 			    <?php endif;?>
-			    <a href="<?php echo get_post_type_archive_link('acoes');?>" class="btn btn-leia">
+			    <a href="<?php echo home_url('category/projetos/'); ?>" class="btn btn-leia">
 			    	<?php _e('Veja todos Projetos','odin');?>
 			    </a>
 			</div><!-- .col-md-6 pull-left section-content -->

@@ -10,17 +10,12 @@
 
 get_header(); ?>
 
-	<section id="primary" class="<?php echo odin_classes_page_sidebar(); ?>">
-		<main id="main-content" class="site-main" role="main">
+	<?php the_archive_title( '<h1 class="noticias-title">', '</h1>' ); ?>
+
+	<section id="primary" class="col-md-12">
+		<main id="main-content" class="site-main noticias" role="main">
 
 			<?php if ( have_posts() ) : ?>
-
-				<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-				</header><!-- .page-header -->
 
 				<?php
 						// Start the Loop.
@@ -31,7 +26,7 @@ get_header(); ?>
 						 * use this in a child theme, then include a file called called content-___.php
 						 * (where ___ is the post format) and that will be used instead.
 						 */
-						get_template_part( 'content', get_post_format() );
+						get_template_part( 'content', 'posts' );
 
 						endwhile;
 
@@ -48,5 +43,5 @@ get_header(); ?>
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
+get_template_part( 'parts/participe' );
 get_footer();

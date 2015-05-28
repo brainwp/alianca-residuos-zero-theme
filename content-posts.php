@@ -27,7 +27,7 @@
 			<span class="meta"><?php odin_posted_on(); ?></span><!-- .meta -->
 			<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 			<?php echo get_excerpt( get_the_content(), '700', ' ...' ); ?>
-			<a href="<?php echo get_permalink( $rede->ID ); ?>" class="mais">Leia mais</a>
+			<a href="<?php echo get_permalink(); ?>" class="mais">Leia mais</a>
 		</div><!-- desc -->
 	</div>
 

@@ -37,6 +37,7 @@ get_header(); ?>
 						<div class="border"></div>
 						<h2><?php echo $conceito->post_title; ?></h2>
 						<span><?php echo get_excerpt( $conceito->post_content, '450', ' ...' ); ?></span>
+						<a href="<?php echo get_permalink( $conceito->ID ); ?>" class="mais">Leia mais</a>
 					</div><!-- .desc -->
 				<?php endif ?>
 			</div><!-- .conceito -->
