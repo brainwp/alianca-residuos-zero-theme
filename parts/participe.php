@@ -43,8 +43,7 @@
 				</div><!-- .agenda -->
 
 				<div class="col-sm-6 btns">
-					<a class="link-comunidade" href="<?php echo home_url( '/comunidade' ); ?>" class="comunidade"></a>
-					<a class="link-fale" href="<?php echo home_url( '/contato' ); ?>" class="fale-conosco"></a>
+					<a href="http://comunidade.residuozero.org.br/" class="link-comunidade comunidade" target="_blank"></a>
 				</div>
 
 			</div><!-- .container -->
