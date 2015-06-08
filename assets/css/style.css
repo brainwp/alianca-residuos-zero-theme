@@ -382,7 +382,11 @@ body.post-type-archive-biblioteca .each .content .thumb {
 body.post-type-archive-entidades {
 	background: url( '../images/bg-noticias.jpg' ) repeat-x center top #dacf93;
 }
-
+h1.entidades-after{
+	color:#496849;
+	text-transform: uppercase;
+	font-weight: 500;
+}
 body.post-type-archive-entidades .each .content {
 	padding:10px;
 	overflow: hidden;

@@ -22,7 +22,9 @@ get_header(); ?>
 		<main id="main-content" class="site-main" role="main">
 
 			<?php if ( have_posts() ) : ?>
-
+			    <h1 class="entidades-after site-title col-md-12 text-center">
+			    	<?php _e('Entidades','odin');?>
+			    </h1><!-- .site-title col-md-12 text-center -->
 				<?php
 					// Start the Loop.
 					while ( have_posts() ) : the_post();
