@@ -382,6 +382,7 @@ body.post-type-archive-biblioteca .each .content .thumb {
 body.post-type-archive-entidades {
 	background: url( '../images/bg-noticias.jpg' ) repeat-x center top #dacf93;
 }
+
 h1.entidades-after{
 	color:#496849;
 	text-transform: uppercase;
@@ -406,6 +407,39 @@ body.post-type-archive-entidades .each .content .thumb {
 }
 .prev-post-reveal-nav,.next-post-reveal-nav{
 	display: none;
+}
+.entidades-modal-img{
+	padding-right:0;
+}
+.entidades-modal-content h3.post-title{
+	color:#496849;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-family: 'Lato',sans-serif;
+	margin-top:0;
+}
+.entidades-modal-content *{
+	font-weight: 500;
+	font-family: 'Lato',sans-serif;
+}
+/* boas praticas */
+body.post-type-archive-boas-praticas, body.single.single-boas-praticas{
+	background: url( '../images/bg-noticias.jpg' ) repeat-x center top #dacf93;
+}
+body.single .boas-praticas {
+	background-color: #FFF;
+	border: 1px solid #DDD;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 0 30px 10px;
+}
+
+body.single .boas-praticas .entry-title {
+	border-bottom: 1px solid #CCC;
+	margin-bottom: 30px;
+	padding-bottom: 15px;
+	padding-top: 15px;
 }
 /* #Footer */
 .sub-footer.participe {

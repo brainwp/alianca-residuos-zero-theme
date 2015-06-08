@@ -6,16 +6,15 @@
 
 get_header(); ?>
 
-	<h1 class="noticias-title"><?php _e( 'Notícias', 'odin' ); ?></h1>
+	<h1 class="noticias-title"><?php _e( 'Boas Práticas', 'odin' ); ?></h1>
 
 	<div id="primary" class="col-md-12">
 		<main id="main-content" class="site-main noticias" role="main">
 
 			<?php
-				$noticias = new WP_Query('posts_per_page=10');
-				if ( $noticias->have_posts() ) :
+				if ( have_posts() ) :
 					// Start the Loop.
-					while ( $noticias->have_posts() ) : $noticias->the_post();
+					while ( have_posts() ) : the_post();
 
 						/*
 						 * Include the post format-specific template for the content. If you want to
@@ -25,7 +24,6 @@ get_header(); ?>
 						get_template_part( 'content', 'posts' );
 
 					endwhile;
-					wp_reset_postdata();
 
 					// Post navigation.
 					odin_paging_nav();

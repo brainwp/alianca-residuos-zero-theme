@@ -38,6 +38,24 @@ $entidades->set_arguments(
     )
 );
 
+$boas_praticas = new Odin_Post_Type(
+    'Boas Praticas',
+    'boas-praticas' // Slug do Post Type.
+);
+$boas_praticas->set_labels(
+    array(
+        'menu_name' => __( 'Boas Práticas', 'odin' ),
+        'name' => _x( 'Boas Práticas', 'Post Type General Name', 'odin' ),
+        'singular_name' => _x( 'Boas Práticas', 'Post Type Singular Name', 'odin' ),
+        'all_items' => __( 'Ver todos', 'odin' ),
+    )
+);
+$boas_praticas->set_arguments(
+    array(
+        'supports' => array( 'title', 'editor', 'thumbnail' )
+    )
+);
+
 if ( ! function_exists('brasa_custom_types') ) {
 
 // Register Custom Post Type
