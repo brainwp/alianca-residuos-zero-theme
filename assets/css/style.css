@@ -386,11 +386,12 @@ h1.entidades-after{
 	color:#496849;
 	text-transform: uppercase;
 	font-weight: 500;
+	font-family: 'Lato',sans-serif;
 }
 body.post-type-archive-entidades .each .content {
-	padding:10px;
 	overflow: hidden;
-	height:330px;
+	height:350px;
+	display: block;
 }
 body.post-type-archive-entidades .each .content .thumb {
 	max-height: 300px;
@@ -401,8 +402,11 @@ body.post-type-archive-entidades .each .content .thumb {
 	background-color: #FFF;
 	text-transform: uppercase;
 	padding:10px;
+	font-family: 'Lato',sans-serif;
 }
-
+.prev-post-reveal-nav,.next-post-reveal-nav{
+	display: none;
+}
 /* #Footer */
 .sub-footer.participe {
 	background: url( '../images/bg-participe.jpg' ) center top #FFF;
