@@ -378,6 +378,26 @@ body.post-type-archive-biblioteca .each .content .thumb {
 	overflow: hidden;
 	width: 100%;
 }
+/*entidades */
+body.post-type-archive-entidades {
+	background: url( '../images/bg-noticias.jpg' ) repeat-x center top #dacf93;
+}
+
+body.post-type-archive-entidades .each .content {
+	padding:10px;
+	overflow: hidden;
+	height:330px;
+}
+body.post-type-archive-entidades .each .content .thumb {
+	max-height: 300px;
+	overflow: hidden;
+	width: 100%;
+}
+.entidades-content .desc{
+	background-color: #FFF;
+	text-transform: uppercase;
+	padding:10px;
+}
 
 /* #Footer */
 .sub-footer.participe {

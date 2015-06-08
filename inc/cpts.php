@@ -22,6 +22,22 @@ $biblioteca->set_arguments(
     )
 );
 
+/* entidades */
+$entidades = new Odin_Post_Type(
+    'Entidade',
+    'entidades' // Slug do Post Type.
+);
+$entidades->set_labels(
+    array(
+        'menu_name' => __( 'Entidades', 'odin' )
+    )
+);
+$entidades->set_arguments(
+    array(
+        'supports' => array( 'title', 'editor', 'thumbnail' )
+    )
+);
+
 if ( ! function_exists('brasa_custom_types') ) {
 
 // Register Custom Post Type
