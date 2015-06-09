@@ -105,3 +105,23 @@ function brasa_custom_types() {
 add_action( 'init', 'brasa_custom_types', 0 );
 
 }
+
+function filter_query_agenda($query){
+    if ( $query->is_main_query() && is_post_type_archive('agenda') ) {
+        $query->set( 'orderby', 'meta_value' );
+        $query->set( 'meta_key', 'agenda_data' );
+        $query->set( 'order', 'DESC' );
+
+        $current = current_time('Ymd');
+        $meta = array();
+        $meta[] = array(
+			'key' => 'agenda_data',
+			'compare' => '>=',
+			'value' => $current
+		);
+
+		$query->set('meta_query', $meta);
+
+    }
+}
+add_action( 'pre_get_posts', 'filter_query_agenda' );
