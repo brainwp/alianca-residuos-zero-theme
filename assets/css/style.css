@@ -91,6 +91,7 @@ h1.site-title {
 .sub-header #conceito-content{
 	display:none;
 	background:white;
+	clear: both;
 }
 /* Home */
 .conceito {
@@ -537,6 +538,29 @@ body.single .boas-praticas .entry-title {
 	overflow: hidden;
 	width: 90%;
 }
+@media screen and (max-width: 700px) {
+	.sub-footer.participe .data{
+		height:auto !important;
+		position: relative !important;
+		width: 100%;
+		clear:both;
+	}
+	.sub-footer.participe .infos{
+		width:100%;
+		margin:0;
+		background:#FFF;
+	}
+	.sub-footer.participe .agenda .each{
+		background:none;
+	}
+	.sub-footer.participe .btns .comunidade{
+		height:110px;
+		background-size: cover;
+		width:100%;
+		margin-top:10px;
+	}
+}
+/* Footer */
 #footer {
 	background: url( '../images/bg-footer.jpg' ) center bottom no-repeat #20590C;
 	border-top: none;
@@ -690,6 +714,8 @@ body.post-type-archive-agenda{
 }
 
 @media screen and (max-width: 700px) {
+	.noticias .each .desc,
+	.noticias .each .thumb,
 	.each.archive-agenda .thumb,
 	.each.archive-agenda .data-content,
 	.each.archive-agenda .desc{
@@ -698,13 +724,16 @@ body.post-type-archive-agenda{
 	.each.archive-agenda .thumb{
 		clear: both;
 	}
+	.noticias .each{
+		max-height: inherit !important;
+	}
 	.each.archive-agenda{
 		max-height: inherit !important;
 	}
-	.each.archive-agenda .fadein{
+	.each.archive-agenda .fadein, .noticias .each .fadein{
 		display: none;
 	}
-	.each.archive-agenda .desc{
+	.each.archive-agenda .desc, .noticias .each .desc{
 		margin-left: 10px;
 		margin-right: 10px;
 	}
