@@ -296,7 +296,7 @@ body.single-post {
 	border-radius: 5px;
 	transition: background-color 0.2s ease;
 	position: absolute;
-	z-index: 999999;
+	z-index: 998;
 }
 .noticias .each .mais:hover {
 	background-color: #15641A;

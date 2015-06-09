@@ -6,4 +6,7 @@ if(is_object($wp_query) && is_object($wp_query->post) && !empty($wp_query->post-
   if($type == 'entidades'){
     get_template_part('modal','entidades');
   }
+  elseif($type == 'agenda'){
+  	get_template_part('modal','agenda');
+  }
 }

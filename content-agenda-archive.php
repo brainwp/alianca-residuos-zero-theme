@@ -40,7 +40,9 @@ $date = DateTime::createFromFormat( 'Ymd', get_post_meta( get_the_ID(), 'agenda_
 		    <h4 class="the-infos">
 		    	<?php echo sprintf(__('A partir das %s','odin'), get_post_meta( get_the_ID(), 'agenda_hora', true));?>
 		    </h4><!-- .the-infos -->
-			<a href="<?php echo get_permalink(); ?>" class="mais">Leia mais</a>
+		    <?php if(!is_single()): ?>
+		        <a href="<?php echo get_permalink(); ?>" class="mais">Leia mais</a>
+		    <?php endif;?>
 		</div><!-- desc -->
 	</div>
 
