@@ -51,6 +51,9 @@ body {
 	-moz-border-radius: 50px;
 	border-radius: 50px;
 }
+#header .navbar-nav li:hover > ul.dropdown-menu{
+	display: block;
+}
 #header .btn.btn-default {
 	background: url( '../images/lupa.png' ) center center no-repeat transparent;
 	border: none;
