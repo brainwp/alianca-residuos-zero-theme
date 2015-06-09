@@ -682,6 +682,10 @@ section#acoes-section .img-container img{
 	color:#AAA;
 	width:100%;
 }
+body.post-type-archive-agenda{
+	background: url( '../images/bg-noticias.jpg' ) repeat-x center top #dacf93;
+}
+
 @media screen and (max-width: 700px) {
 	.each.archive-agenda .thumb,
 	.each.archive-agenda .data-content,
