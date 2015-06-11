@@ -56,6 +56,23 @@ $boas_praticas->set_arguments(
     )
 );
 
+$links = new Odin_Post_Type(
+    'Links',
+    'links' // Slug do Post Type.
+);
+$links->set_labels(
+    array(
+        'menu_name' => __( 'Links', 'odin' ),
+        'name' => _x( 'Links', 'Post Type General Name', 'odin' ),
+        'singular_name' => _x( 'Links', 'Post Type Singular Name', 'odin' ),
+        'all_items' => __( 'Ver todos Links', 'odin' ),
+    )
+);
+$links->set_arguments(
+    array(
+        'supports' => array( 'title', 'editor', 'thumbnail' )
+    )
+);
 if ( ! function_exists('brasa_custom_types') ) {
 
 // Register Custom Post Type
@@ -122,6 +139,10 @@ function filter_query_agenda($query){
 
 		$query->set('meta_query', $meta);
 
+    }
+
+    if ( $query->is_main_query() && is_post_type_archive('links') ) {
+    	$query->set( 'posts_per_page', -1 );
     }
 }
 add_action( 'pre_get_posts', 'filter_query_agenda' );
