@@ -234,6 +234,7 @@ function odin_enqueue_scripts() {
 
 	// Main jQuery.
 	wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array(), null, true );
+	wp_localize_script( 'odin-main', 'odin', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 
 	// Grunt watch livereload in the browser.
 	// wp_enqueue_script( 'odin-livereload', 'http://localhost:35729/livereload.js?snipver=1', array(), null, true );
@@ -398,3 +399,12 @@ function get_excerpt( $content = '', $limit = '', $after = '' ){
 	$excerpt = $excerpt . $a;
 	return $excerpt;
 }
+/* class brasa social feed */
+require_once get_template_directory() . '/inc/youtube-api-class.php';
+global $brasa_social_feed;
+$brasa_social_feed = new Brasa_Social_Feed(
+	array(
+		'youtube_auth'     => 'AIzaSyC5UL0Us0mOCh2wx_kkCi6JjEQ0niM_YiM',
+		'youtube_user'     => kirki_get_option('youtube_channel'),
+	)
+);

@@ -756,3 +756,18 @@ body.post-type-archive-agenda{
 body.post-type-archive-links{
 	background: url( '../images/bg-noticias.jpg' ) repeat-x center top #dacf93;
 }
+/*youtube*/
+.youtube.social-feed{
+	height:200px;
+	display: block;
+}
+.youtube.social-feed .thumb{
+	height: 120px;
+	overflow: hidden;
+}
+.youtube.social-feed .thumb img{
+	width: 100%;
+}
+#youtube-video{
+	display: none;
+}

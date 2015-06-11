@@ -121,6 +121,14 @@ function brasa_kirki_fields( $fields ) {
 		'priority' => 1,
 	);
 	$fields[] = array(
+		'type'     => 'url',
+		'setting'  => 'youtube_channel',
+		'label'    => __( 'ID do canal no YouTube', 'odin' ),
+		'section'  => 'social',
+		'default'  => '',
+		'priority' => 1,
+	);
+	$fields[] = array(
 		'type'     => 'text',
 		'setting'  => 'email',
 		'label'    => __( 'Email', 'odin' ),
