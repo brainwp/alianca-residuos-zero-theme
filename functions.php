@@ -72,6 +72,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		 */
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'noticias-thumbnail', '360', '280', array( 'center', 'center' ) );
+		add_image_size( 'thumb-600-400', '600', '400', array( 'center', 'center' ) );
 		add_image_size( 'square_thumb', '400', '400', array( 'center', 'center' ) );
 
 		/**
@@ -417,5 +418,15 @@ function redirect_links() {
         return;
 
     wp_redirect( get_post_type_archive_link( 'links' ), 301 );
+    exit;
+}
+
+/* Redireciona single Agenda para listagem */
+add_action( 'template_redirect', 'redirect_agenda' );
+function redirect_agenda() {
+    if ( ! is_singular( 'agenda' ) )
+        return;
+
+    wp_redirect( get_post_type_archive_link( 'agenda' ), 301 );
     exit;
 }

@@ -8,7 +8,7 @@ get_header(); ?>
 	<h1 class="noticias-title"><?php _e( 'Agenda', 'odin' ); ?></h1>
 
 	<div id="primary" class="col-md-12">
-		<main id="main-content" class="site-main noticias" role="main">
+		<main id="main-content" class="site-main agenda" role="main">
 
 			<?php
 				if ( have_posts() ) :
