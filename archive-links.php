@@ -19,7 +19,7 @@
 get_header(); ?>
 
 	<section id="primary" class="col-md-12">
-		<main id="main-content" class="site-main" role="main">
+		<main id="main-content" class="site-main links" role="main">
 			<h1 class="noticias-title"><?php _e( 'Links', 'odin' ); ?></h1>
 			<?php if ( have_posts() ) : ?>
 				<?php

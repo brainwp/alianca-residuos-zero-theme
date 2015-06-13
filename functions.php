@@ -399,7 +399,8 @@ function get_excerpt( $content = '', $limit = '', $after = '' ){
 	$excerpt = $excerpt . $a;
 	return $excerpt;
 }
-/* class brasa social feed */
+
+/* Class Brasa Social Feed */
 require_once get_template_directory() . '/inc/youtube-api-class.php';
 global $brasa_social_feed;
 $brasa_social_feed = new Brasa_Social_Feed(
@@ -408,3 +409,13 @@ $brasa_social_feed = new Brasa_Social_Feed(
 		'youtube_user'     => kirki_get_option('youtube_channel'),
 	)
 );
+
+/* Redireciona single Links para listagem */
+add_action( 'template_redirect', 'redirect_links' );
+function redirect_links() {
+    if ( ! is_singular( 'links' ) )
+        return;
+
+    wp_redirect( get_post_type_archive_link( 'links' ), 301 );
+    exit;
+}

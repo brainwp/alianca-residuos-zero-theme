@@ -18,7 +18,8 @@ $biblioteca->set_labels(
 );
 $biblioteca->set_arguments(
     array(
-        'supports' => array( 'title', 'editor', 'thumbnail' )
+        'supports' => array( 'title', 'editor', 'thumbnail' ),
+        'menu_icon' => 'dashicons-book-alt'
     )
 );
 
@@ -34,7 +35,8 @@ $entidades->set_labels(
 );
 $entidades->set_arguments(
     array(
-        'supports' => array( 'title', 'editor', 'thumbnail' )
+        'supports' => array( 'title', 'editor', 'thumbnail' ),
+        'menu_icon' => 'dashicons-building'
     )
 );
 
@@ -52,7 +54,8 @@ $boas_praticas->set_labels(
 );
 $boas_praticas->set_arguments(
     array(
-        'supports' => array( 'title', 'editor', 'thumbnail' )
+        'supports' => array( 'title', 'editor', 'thumbnail' ),
+        'menu_icon' => 'dashicons-visibility'
     )
 );
 
@@ -70,7 +73,8 @@ $links->set_labels(
 );
 $links->set_arguments(
     array(
-        'supports' => array( 'title', 'editor', 'thumbnail' )
+        'supports' => array( 'title', 'editor', 'thumbnail' ),
+        'menu_icon' => 'dashicons-admin-links'
     )
 );
 if ( ! function_exists('brasa_custom_types') ) {
