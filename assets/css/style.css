@@ -739,38 +739,6 @@ section#acoes-section .img-container img{
 body.post-type-archive-agenda{
 	background: url( '../images/bg-noticias.jpg' ) repeat-x center top #dacf93;
 }
-@media screen and (max-width: 700px) {
-	.noticias .each .desc,
-	.noticias .each .thumb,
-	.each.archive-agenda .thumb,
-	.each.archive-agenda .data-content,
-	.each.archive-agenda .desc{
-		height:auto;
-	}
-	.each.archive-agenda .thumb{
-		background-color: #CCC;
-		clear: both;
-		text-align: center;
-	}
-	.noticias .each{
-		max-height: inherit !important;
-	}
-	.each.archive-agenda{
-		max-height: inherit !important;
-	}
-	.each.archive-agenda span.mes {
-		padding-bottom: 30px;
-	}
-	.each.archive-agenda .fadein, .noticias .each .fadein{
-		display: none;
-	}
-	.each.archive-agenda .desc, .noticias .each .desc{
-		margin-left: 0px;
-		margin-right: 0px;
-		overflow: hidden;
-		padding-bottom: 20px;
-	}
-}
 /* Archive Links */
 .site-main.links {
 	overflow: hidden;
@@ -814,4 +782,53 @@ body.post-type-archive-links{
 }
 #youtube-video{
 	display: none;
+}
+/* Erro 404 */
+.erro-404 .page-title {
+	color: #496849;
+	font-family: "Lato",sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+.erro-404 .thumb {
+	background: url('../images/404.png') no-repeat center center transparent;
+	background-size: auto 100%;
+	margin-bottom: 30px;
+	min-height: 300px;
+}
+@media screen and (max-width: 700px) {
+	.noticias .each .desc,
+	.noticias .each .thumb,
+	.each.archive-agenda .thumb,
+	.each.archive-agenda .data-content,
+	.each.archive-agenda .desc{
+		height:auto;
+	}
+	.each.archive-agenda .thumb{
+		background-color: #CCC;
+		clear: both;
+		text-align: center;
+	}
+	.noticias .each{
+		max-height: inherit !important;
+	}
+	.each.archive-agenda{
+		max-height: inherit !important;
+	}
+	.each.archive-agenda span.mes {
+		padding-bottom: 30px;
+	}
+	.each.archive-agenda .fadein, .noticias .each .fadein{
+		display: none;
+	}
+	.each.archive-agenda .desc, .noticias .each .desc{
+		margin-left: 0px;
+		margin-right: 0px;
+		overflow: hidden;
+		padding-bottom: 20px;
+	}
+	.erro-404 .page-header,
+	.erro-404 .page-content {
+		text-align: center;
+	}
 }

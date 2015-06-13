@@ -9,17 +9,22 @@
 get_header(); ?>
 
 	<div id="primary" class="<?php echo odin_classes_page_full(); ?>">
-		<main id="main-content" class="site-main" role="main">
+		<main id="main-content" class="site-main erro-404" role="main">
 
-			<header class="page-header">
-				<h1 class="page-title"><?php _e( 'Not Found', 'odin' ); ?></h1>
-			</header>
+			<div class="col-md-3 thumb"></div>
+			<div class="col-md-9">
 
-			<div class="page-content">
-				<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'odin' ); ?></p>
+				<header class="page-header">
+					<h1 class="page-title"><?php _e( 'Not Found', 'odin' ); ?></h1>
+				</header>
 
-				<?php get_search_form(); ?>
-			</div><!-- .page-content -->
+				<div class="page-content">
+					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'odin' ); ?></p>
+
+					<?php get_search_form(); ?>
+				</div><!-- .page-content -->
+
+			</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
