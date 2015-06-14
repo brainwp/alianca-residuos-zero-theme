@@ -290,13 +290,15 @@ body.single-post {
 }
 .noticias .each .desc {
 	color: #666;
+	margin-left: 20px;
 	padding-bottom: 20px;
 	padding-right: 45px;
 	padding-top: 20px;
 	position: relative;
 }
 .noticias .each .desc .fadein {
-	background: url( '../images/bg-fade-noticias.png' ) center bottom;
+	background: url( '../images/bg-fade-noticias.png' ) center bottom repeat-x;
+	display: block;
 	height: 90%;
 	overflow: hidden;
 	position: absolute;
@@ -306,13 +308,27 @@ body.single-post {
 	color: #888;
 	font-size: 0.8em;
 }
+.noticias .each .row {
+	position: relative;
+}
+.noticias .each .thumb {
+	margin-left: -15px !important;
+	margin-right: -15px !important;
+	text-align: center;
+}
+.noticias .each .thumb img {
+	margin: 0 auto;
+}
 .noticias .each h2 {
 	margin-top: 10px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	text-align: left;
 	text-transform: uppercase;
 }
 .noticias .each .mais {
 	background-color: #496849;
-	bottom: 0px;
+	bottom: 20px;
 	color: #FFF;
 	right: 45px;
 	padding: 3px 10px;
@@ -371,7 +387,7 @@ body.single-post {
 	width: 100%;
 }
 body.single .entry-title {
-	text-align: left
+	text-align: left;
 }
 body.single .post {
 	background-color: #FFF;
@@ -847,6 +863,11 @@ body.post-type-archive-links{
 	margin-bottom: 30px;
 	min-height: 300px;
 }
+@media screen and (max-width: 990px) {
+	.noticias .each{
+		max-height: inherit !important;
+	}
+}
 @media screen and (max-width: 768px) {
 	/* Home */
 	.atuacao h2 {
@@ -875,20 +896,10 @@ body.post-type-archive-links{
 	}
 }
 @media screen and (max-width: 700px) {
-	.noticias .each .desc,
-	.noticias .each .thumb,
-	.each.archive-agenda .thumb,
-	.each.archive-agenda .data-content,
-	.each.archive-agenda .desc{
-		height:auto;
-	}
 	.each.archive-agenda .thumb{
 		background-color: #CCC;
 		clear: both;
 		text-align: center;
-	}
-	.noticias .each{
-		max-height: inherit !important;
 	}
 	.each.archive-agenda{
 		max-height: inherit !important;

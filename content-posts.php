@@ -11,24 +11,22 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'each' ); ?>>
 	
-	<div class="row">
-		<?php if (has_post_thumbnail()): ?>
-			<div class="col-md-4 thumb">
-				<?php the_post_thumbnail( 'noticias-thumbnail' ); ?>
-			</div><!-- thumb -->
-		<?php else: ?>
-			<div class="col-md-4 thumb">
+	<div class="col-md-12">
+		<div class="col-sm-12 col-md-4 thumb nopadding">
+			<?php if (has_post_thumbnail()): ?>
+				<?php the_post_thumbnail( 'thumb-600-400' ); ?>
+			<?php else: ?>
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/noticias-default.jpg" alt="<?php the_title(); ?>">
-			</div><!-- thumb -->
-		<?php endif ?>
+			<?php endif ?>
+		</div><!-- thumb -->
 
-		<div class="col-md-8 desc">
+		<div class="col-sm-12 col-md-8 desc">
 			<div class="fadein"></div>
 			<span class="meta"><?php odin_posted_on(); ?></span><!-- .meta -->
 			<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 			<?php echo get_excerpt( get_the_content(), '700', ' ...' ); ?>
-			<a href="<?php echo get_permalink(); ?>" class="mais">Leia mais</a>
 		</div><!-- desc -->
-	</div>
+		<a href="<?php echo get_permalink(); ?>" class="mais"><?php _e( 'Leia mais', 'odin' ); ?></a>
+	</div><!-- row -->
 
 </article><!-- #post-## -->
