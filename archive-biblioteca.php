@@ -19,7 +19,7 @@
 get_header(); ?>
 
 	<section id="primary" class="col-md-12">
-		<main id="main-content" class="site-main" role="main">
+		<main id="main-content" class="site-main biblioteca internas" role="main">
 
 			<?php if ( have_posts() ) : ?>
 

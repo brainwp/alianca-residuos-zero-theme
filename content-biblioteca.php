@@ -10,15 +10,13 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'col-md-4 each' ); ?>>
 	
 	<div class="content">
-		<?php if ( has_post_thumbnail() ): ?>
-			<div class="thumb">
-				<?php the_post_thumbnail( 'noticias-thumbnail' ); ?>
-			</div><!-- thumb -->
-		<?php else: ?>
-			<div class="thumb">
+		<div class="thumb">
+			<?php if ( has_post_thumbnail() ): ?>
+				<?php the_post_thumbnail( 'thumb-600-300' ); ?>
+			<?php else: ?>
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/noticias-default.jpg" alt="<?php the_title(); ?>">
-			</div><!-- thumb -->
-		<?php endif ?>
+			<?php endif ?>
+		</div><!-- thumb -->
 
 		<div class="col-md-12 desc">
 			<div class="fadein"></div>

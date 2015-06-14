@@ -31,6 +31,9 @@ body {
 h1, h2, h3, h4, h5 {
 	font-weight: 300;
 }
+.site-main.internas {
+	padding-bottom: 20px;
+}
 /* Header */
 .bg-menu {
 	background-color: #496849;
@@ -360,11 +363,15 @@ body.single-post {
 }
 .entry-title {
 	color: #496849;
+	font-family: "Lato",sans-serif;
 	padding-bottom: 30px;
 	padding-top: 30px;
 	text-transform: uppercase;
 	text-align: center;
 	width: 100%;
+}
+body.single .entry-title {
+	text-align: left
 }
 body.single .post {
 	background-color: #FFF;
@@ -396,6 +403,35 @@ body.post-type-archive-biblioteca .each .content .thumb {
 	max-height: 150px;
 	overflow: hidden;
 	width: 100%;
+}
+.biblioteca {
+	margin-top: 20px;
+}
+.biblioteca .each {
+	margin-bottom: 20px;
+}
+.biblioteca .entry-title {
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+.biblioteca .thumb img {
+	height: auto;
+	width: 100%;
+}
+.biblioteca .desc {
+	padding-bottom: 20px;
+}
+.biblioteca .each .desc .fadein {
+	background: url( '../images/bg-fade-noticias.png' ) center bottom;
+	height: 90%;
+	overflow: hidden;
+	position: absolute;
+	width: 95%;
+}
+.biblioteca .mais {
+	bottom: 20px;
+	position: absolute;
+	right: 20px;
 }
 /*entidades */
 body.post-type-archive-entidades {
