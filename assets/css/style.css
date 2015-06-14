@@ -37,7 +37,8 @@ h1, h2, h3, h4, h5 {
 	height: 55px;
 	display: block;
 	position: absolute;
-	top: 0
+	top: 0;
+	width: 100%;
 }
 .navbar {
 	margin-bottom: 0;
@@ -64,6 +65,9 @@ h1, h2, h3, h4, h5 {
 	background: url( '../images/lupa.png' ) center center no-repeat transparent;
 	border: none;
 	text-indent: -999999px;
+}
+#header img {
+	width: 100%;
 }
 body.logged-in .bg-menu {
 	margin-top: 30px;
@@ -129,6 +133,9 @@ ul.about-nav li a:hover {
 	color: #FFF;
 }
 .conceito .desc h2 {
+	color: #496849;
+	font-family: "Lato",sans-serif;
+	font-weight: 300;
 	text-transform: uppercase;
 }
 .conceito .desc .border {
@@ -142,13 +149,16 @@ ul.about-nav li a:hover {
 	float: none;
 	margin: 0 auto;
 	padding-top: 40px;
-	overflow: hidden;
 }
 .rede h2 {
+	color: #496849;
+	font-family: "Lato",sans-serif;
+	font-weight: 300;
 	text-transform: uppercase;
 }
 .rede .thumb {
 	padding-top: 22px;
+	text-align: center;
 }
 .mais {
 	background-color: #496849;
@@ -182,18 +192,20 @@ ul.about-nav li a:hover {
 }
 /* Pre Footer */
 .atuacao {
-	background: url( '../images/bg-atuacao.jpg' ) center bottom fixed #f4f4f4;
+	background: url( '../images/bg-atuacao.jpg' ) center bottom fixed no-repeat #D8BB6D;
 	background-size: 100%;
 	height: 600px;
 	margin-top: 30px;
 }
 .atuacao h2 {
 	color: #FFF;
-	font-weight: bolder;
 	margin-bottom: 30px;
 	margin-left: 50px;
 	margin-top: 75px;
 	text-decoration: underline;
+	text-transform: uppercase;
+	font-family: "Lato",sans-serif;
+	font-weight: 300;
 	text-transform: uppercase;
 }
 .atuacao .btn {
@@ -248,6 +260,9 @@ ul.about-nav li a:hover {
 }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
 	color: #496849 !important;
+}
+.creditos {
+	overflow: hidden;
 }
 /* Noícias */
 body.page-template-noticias,
@@ -795,6 +810,33 @@ body.post-type-archive-links{
 	background-size: auto 100%;
 	margin-bottom: 30px;
 	min-height: 300px;
+}
+@media screen and (max-width: 768px) {
+	/* Home */
+	.atuacao h2 {
+		text-align: center;
+		margin-left: auto;
+		margin-top: 20px;
+	}
+	ul.about-nav {
+		padding-top: 20px;
+	}
+	/* Footer */
+	.creditos {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		text-align: center;
+	}
+	#footer .site-info {
+		text-align: center;
+	}
+	#footer .copy {
+		float: none;
+	}
+	#footer .brasa {
+		float: none;
+		margin: 20px auto 10px;
+	}
 }
 @media screen and (max-width: 700px) {
 	.noticias .each .desc,

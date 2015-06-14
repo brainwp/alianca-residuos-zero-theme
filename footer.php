@@ -28,7 +28,7 @@
 					 <?php endif ?>
 				<?php endif ?>
 			</div><!-- .site-info -->
-			<div class="col-md-4">
+			<div class="col-sm-12 col-md-4 creditos">
 				<a href="http://brasa.art.br/" target="_blank"><span class="brasa"></span></a><span class="copy">Todos os Direitos Reservados &copy;</span>
 			</div>
 
