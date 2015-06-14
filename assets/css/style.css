@@ -510,6 +510,69 @@ body.single .boas-praticas .entry-title {
 	padding-bottom: 15px;
 	padding-top: 15px;
 }
+.boas-praticas .each {
+	background-color: #FFF;
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+.boas-praticas .each .desc {
+	color: #666;
+	margin-left: 20px;
+	padding-bottom: 20px;
+	padding-right: 45px;
+	padding-top: 20px;
+	position: relative;
+}
+.boas-praticas .each .desc .fadein {
+	background: url( '../images/bg-fade-noticias.png' ) center bottom repeat-x;
+	display: block;
+	height: 90%;
+	overflow: hidden;
+	position: absolute;
+	width: 95%;
+}
+.boas-praticas .each .meta {
+	color: #888;
+	font-size: 0.8em;
+}
+.boas-praticas .each .row {
+	position: relative;
+}
+.boas-praticas .each .thumb {
+	margin-left: -15px !important;
+	margin-right: -15px !important;
+	text-align: center;
+}
+.boas-praticas .each .thumb img {
+	margin: 0 auto;
+}
+.boas-praticas .each h2 {
+	margin-top: 10px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	text-align: left;
+	text-transform: uppercase;
+}
+.boas-praticas .each .mais {
+	background-color: #496849;
+	bottom: 20px;
+	color: #FFF;
+	right: 45px;
+	padding: 3px 10px;
+	text-transform: uppercase;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	transition: background-color 0.2s ease;
+	position: absolute;
+	z-index: 998;
+}
+.boas-praticas .each .mais:hover {
+	background-color: #15641A;
+}
+
+
+
 /* #Footer */
 .sub-footer.participe {
 	background: url( '../images/bg-participe.jpg' ) center top #FFF;

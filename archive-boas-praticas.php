@@ -9,7 +9,7 @@ get_header(); ?>
 	<h1 class="noticias-title"><?php _e( 'Boas Práticas', 'odin' ); ?></h1>
 
 	<div id="primary" class="col-md-12">
-		<main id="main-content" class="site-main noticias" role="main">
+		<main id="main-content" class="site-main boas-praticas" role="main">
 
 			<?php
 				if ( have_posts() ) :
