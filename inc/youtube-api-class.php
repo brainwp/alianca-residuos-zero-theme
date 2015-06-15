@@ -72,7 +72,7 @@ class Brasa_Social_Feed{
 		$limit = 10;
 
 		$response = $this->get_youtube_posts($limit);
-		if($response['nextPageToken'] && !empty($response['nextPageToken'])){
+		if(isset($response['nextPageToken']) && !empty($response['nextPageToken'])){
 			header('next-page-token: '.$response['nextPageToken']);
 		}
 
