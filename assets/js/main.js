@@ -1,3 +1,6 @@
+/*! http://tinynav.viljamis.com v1.2 by @viljamis */
+(function(a,k,g){a.fn.tinyNav=function(l){var c=a.extend({active:"selected",header:"",indent:"- ",label:""},l);return this.each(function(){g++;var h=a(this),b="tinynav"+g,f=".l_"+b,e=a("<select/>").attr("id",b).addClass("tinynav "+b);if(h.is("ul,ol")){""!==c.header&&e.append(a("<option/>").text(c.header));var d="";h.addClass("l_"+b).find("a").each(function(){d+='<option value="'+a(this).attr("href")+'">';var b;for(b=0;b<a(this).parents("ul, ol").length-1;b++)d+=c.indent;d+=a(this).text()+"</option>"});
+e.append(d);c.header||e.find(":eq("+a(f+" li").index(a(f+" li."+c.active))+")").attr("selected",!0);e.change(function(){k.location.href=a(this).val()});a(f).after(e);c.label&&e.before(a("<label/>").attr("for",b).addClass("tinynav_label "+b+"_label").append(c.label))}})}})(jQuery,this,0);
 jQuery(document).ready(function($) {
 	// fitVids.
 	$( '.entry-content' ).fitVids();
@@ -93,5 +96,11 @@ jQuery(document).ready(function($) {
 			  	}
 			}
 	    });
+	});
+	//responsive nav
+	$('.navbar-main-navigation>ul').tinyNav({
+	    active: 'selected', // String: Set the "active" class
+	    header: 'Menu', // String: Specify text for "header" and show header instead of the active item
+	    indent: '- ', // String: Specify text for indenting sub-items
 	});
 });
