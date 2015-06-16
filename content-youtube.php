@@ -10,5 +10,6 @@ global $yt_post;
 		<div class="col-md-12 description">
 			<?php echo $yt_post['snippet']['title'];?>
 		</div><!-- .col-md-12 description -->
+		<div class="clear"></div>
 	</div><!-- each -->
 </a><!-- .col-md-12 -->

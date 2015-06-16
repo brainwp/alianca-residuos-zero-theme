@@ -917,11 +917,11 @@ body.post-type-archive-links{
 }
 /* Youtube */
 .youtube.social-feed{
-	height:200px;
+	/*height:200px;*/
 	display: block;
 }
 .youtube.social-feed .thumb{
-	height: 120px;
+	height: 150px;
 	overflow: hidden;
 }
 .youtube.social-feed .thumb img{
@@ -930,12 +930,10 @@ body.post-type-archive-links{
 #youtube-video{
 	display: none;
 }
-#youtube-feed {
-	overflow: hidden;
-}
 .site-main.youtube .cada {
 	background-color: #FFF;
-	max-height: 170px;
+	height: 200px;
+	margin-bottom: 20px;
 	overflow: hidden;
 	position: relative;
 }
