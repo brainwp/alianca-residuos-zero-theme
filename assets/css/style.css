@@ -930,6 +930,25 @@ body.post-type-archive-links{
 #youtube-video{
 	display: none;
 }
+#youtube-feed {
+	overflow: hidden;
+}
+.site-main.youtube .cada {
+	background-color: #FFF;
+	max-height: 170px;
+	overflow: hidden;
+	position: relative;
+}
+.site-main.youtube .cada .description {
+	background-color: #FFF;
+	bottom: 0;
+	height: auto;
+	overflow: hidden;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	position: absolute;
+	width: 100%;
+}
 /* Erro 404 */
 .erro-404 .page-title {
 	color: #496849;

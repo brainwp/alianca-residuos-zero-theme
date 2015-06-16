@@ -15,7 +15,7 @@ get_header(); ?>
 	<h1 class="noticias-title"><?php the_title(); ?></h1>
 
 	<div id="primary" class="<?php echo odin_classes_page_full(); ?>">
-		<main id="main-content" class="site-main" role="main">
+		<main id="main-content" class="site-main youtube" role="main">
 			<div id="youtube-video" class="col-md-12">
 				<p style="text-align:center">
 					<iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>
