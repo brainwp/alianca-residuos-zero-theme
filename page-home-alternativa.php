@@ -14,6 +14,6 @@ get_header();
 ?>
 </div><!-- #main -->
 </div><!-- .container -->
-<?php get_template_part('parts/acoes');?>
+<?php get_template_part('parts/novidades');?>
 <?php get_template_part('parts/participe-alternativo');?>
 <?php get_footer('alternativo');?>
