@@ -985,6 +985,22 @@ body.post-type-archive-links{
 	margin-bottom: 30px;
 	min-height: 300px;
 }
+/* Contato */
+.contato {
+	background-color: #FFF;
+	margin: 0 auto 30px;
+	max-width: 700px;
+	padding: 0 30px;
+}
+.contato input, .contato textarea {
+	background-color: #F1F1F1;
+	border: none;
+	padding: 7px 10px;
+	width: 100%;
+}
+.contato input[type="submit"] {
+	width: auto;
+}
 @media screen and (max-width: 990px) {
 	.noticias .each{
 		max-height: inherit !important;

@@ -8,7 +8,11 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="entry-content">
+	<?php if (is_page('contato')) : ?>
+		<div class="entry-content contato">
+	<?php else : ?>
+		<div class="entry-content">
+	<?php endif; ?>
 		<?php
 			the_content();
 			wp_link_pages( array(
