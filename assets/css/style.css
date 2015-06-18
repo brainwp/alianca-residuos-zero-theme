@@ -829,6 +829,10 @@ section#novidades{
 	width:100%;
 	clear: both;
 }
+.page-template-page-home-alternativa .noticias .thumb {
+	max-height: 180px;
+	overflow: hidden;
+}
 .page-template-page-home-alternativa .noticias .fadein{
 	display: none !important;
 }

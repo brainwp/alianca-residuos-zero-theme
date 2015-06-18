@@ -34,8 +34,8 @@
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 				    <?php get_template_part('content','posts');?>
 			    <?php endwhile;?>
-			    <h2 class="section-title col-md-4">
-					<?php _e('Biblioteca','odin');?>
+			    <h2 class="section-title col-md-5">
+					<?php _e( 'Boas Práticas', 'odin' );?>
 				</h2><!-- .section-title -->
 				<a href="<?php echo home_url('/biblioteca');?>" class="btn btn-primary btn-leia">
 					<?php _e('Veja mais','odin');?>
@@ -43,7 +43,7 @@
 				<?php
 				// WP_Query arguments
 				$args = array (
-					'post_type'              => 'biblioteca',
+					'post_type'              => 'boas-praticas',
 					'posts_per_page'         => 2,
 				);
 				// The Query
