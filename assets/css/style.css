@@ -5,8 +5,8 @@ Description: Odin main stylesheet.
 /*responsive menu */
 .tinynav { display: none }
 @media screen and (max-width: 600px) {
-    .js .tinynav { display: block }
-    .js #nav { display: none }
+    .tinynav { display: block }
+    #nav { display: none }
     ul.navbar-nav{
     	display: none;
     }
@@ -53,6 +53,10 @@ h1, h2, h3, h4, h5 {
 	padding-bottom: 20px;
 }
 /* Header */
+.logo-interna{
+	display: inline-block;
+	float:left;
+}
 .bg-menu {
 	background-color: #496849;
 	height: 55px;
@@ -93,6 +97,13 @@ h1, h2, h3, h4, h5 {
 body.logged-in .bg-menu {
 	margin-top: 30px;
 }
+body.page-template-page-embed .bg-menu {
+	margin-top:0;
+}
+body.page-template-page-embed #header{
+	position: absolute;
+	top:0;
+}
 h1.site-title {
 	display: block;
 	font-weight: bolder;
@@ -115,7 +126,7 @@ h1.site-title {
 	cursor: pointer;
 	float: right;
 	margin-bottom: 3px;
-	margin-top: -5px;
+	margin-top: 80px;
 	padding: 3px 30px 35px 30px;
 	text-transform: uppercase;
 }
@@ -615,8 +626,7 @@ body.single .boas-praticas .entry-title {
 	width: 90%;
 }
 .sub-footer.participe h1.site-title {
-	font-weight: 300;
-	font-family: 'Lato',sans-serif;
+	font-weight: 500;
 	margin-top: 30px;
 }
 .sub-footer.participe .agenda {
@@ -630,8 +640,6 @@ body.single .boas-praticas .entry-title {
 }
 .sub-footer.participe .agenda h3 {
 	margin-bottom: 5px !important;
-	font-weight: 300;
-	font-family: 'Lato',sans-serif;
 }
 .sub-footer.participe .agenda span {
 	display: block;
@@ -832,12 +840,11 @@ section#novidades{
 	width:100%;
 	clear: both;
 }
-.page-template-page-home-alternativa .noticias .thumb {
-	max-height: 180px;
-	overflow: hidden;
-}
 .page-template-page-home-alternativa .noticias .fadein{
 	display: none !important;
+}
+.page-template-page-home-alternativa .noticias .each .mais{
+
 }
 /* archive agenda */
 .each.archive-agenda span.dia-mes{
@@ -984,22 +991,6 @@ body.post-type-archive-links{
 	background-size: auto 100%;
 	margin-bottom: 30px;
 	min-height: 300px;
-}
-/* Contato */
-.contato {
-	background-color: #FFF;
-	margin: 0 auto 30px;
-	max-width: 700px;
-	padding: 0 30px;
-}
-.contato input, .contato textarea {
-	background-color: #F1F1F1;
-	border: none;
-	padding: 7px 10px;
-	width: 100%;
-}
-.contato input[type="submit"] {
-	width: auto;
 }
 @media screen and (max-width: 990px) {
 	.noticias .each{

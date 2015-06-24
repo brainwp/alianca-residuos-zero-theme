@@ -63,6 +63,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		register_nav_menus(
 			array(
 				'main-menu' => __( 'Main Menu', 'odin' ),
+				'main-menu-embed' => __( 'Main Menu Comunidade', 'odin' ),
 				'about-menu' => __( 'About Menu', 'odin' )
 			)
 		);

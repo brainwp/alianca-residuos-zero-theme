@@ -26,7 +26,12 @@
 	<div class="col-md-12 bg-menu"></div>
 
 	<div class="container">
-		<header id="header" role="banner">
+		<?php $class = '';?>
+		<?php if(is_page_template('page-embed.php')): ?>
+		    <?php $class = 'container';?>
+		    <base target="_parent" />
+	    <?php endif;?>
+		<header id="header" role="banner" class="<?php echo $class;?>">
 
 			<nav id="main-navigation" class="navbar navbar-top" role="navigation">
 				<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'odin' ); ?>"><?php _e( 'Skip to content', 'odin' ); ?></a>
@@ -39,7 +44,9 @@
 				</div>
 
 				<div class="collapse navbar-collapse navbar-main-navigation">
+
 					<?php
+					if(!is_page_template('page-embed.php' )):
 						wp_nav_menu(
 							array(
 								'theme_location' => 'main-menu',
@@ -50,12 +57,27 @@
 								'walker'         => new Odin_Bootstrap_Nav_Walker()
 							)
 						);
+					else :
+						wp_nav_menu(
+							array(
+								'theme_location' => 'main-menu-embed',
+								'depth'          => -1,
+								'container'      => false,
+								'menu_class'     => 'nav navbar-nav',
+								'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
+								'walker'         => new Odin_Bootstrap_Nav_Walker()
+							)
+						);
+
+					endif;
 					?>
 
 					<form method="get" class="navbar-form navbar-right" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
 						<label for="navbar-search" class="sr-only"><?php _e( 'Search:', 'odin' ); ?></label>
 						<div class="form-group">
-							<input type="search" class="form-control" name="s" id="navbar-search" />
+						    <?php $attrs = '';?>
+							<?php if(is_page_template('page-embed.php')) $attrs = 'placeholder="'.__('Pesquisar no site principal','odin').'"';?>
+							<input type="search" class="form-control" name="s" id="navbar-search" <?php echo $attrs;?> />
 						</div>
 						<button type="submit" class="btn btn-default"><?php _e( 'Search', 'odin' ); ?></button>
 					</form>
@@ -79,15 +101,17 @@
 				<h1 class="site-title"><a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
 			<?php else : ?>
-
+			<?php if(!is_page_template('page-embed.php')):?>
 				</div><!-- .container -->
 
 					<div class="sub-header">
 
 						<div class="container">
 
-							<a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-internas.jpg" alt="<?php bloginfo( 'name' ); ?>"></a>
-							<a class="click conceito" id="conceito-click" data-open="false"><?php _e( 'Entenda o Conceito', 'odin' ); ?></a>
+							<a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo-interna"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-internas.png" alt="<?php bloginfo( 'name' ); ?>"></a>
+							<?php if(!is_page_template('page-embed.php')): ?>
+							    <a class="click conceito" id="conceito-click" data-open="false"><?php _e( 'Entenda o Conceito', 'odin' ); ?></a>
+			                <?php endif;?>
 			                <?php $conceito = get_page_by_path( 'o-conceito', OBJECT, 'page' ); ?>
 			                <?php if($conceito):?>
 			                    <div class="col-md-12" id="conceito-content">
@@ -102,10 +126,9 @@
 						</div><!-- .container -->
 
 					</div><!-- sub-header -->
-
 				<div class="container">
-
-			<?php endif ?>
+			<?php endif;?>
+			<?php endif; ?>
 
 
 
