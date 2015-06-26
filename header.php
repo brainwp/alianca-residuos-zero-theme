@@ -97,6 +97,11 @@
 					<a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-home.png" alt="<?php bloginfo( 'name' ); ?>"></a>
 
 				<?php endif; ?>
+			    <?php if(is_page() && is_page_template('page-home-alternativa.php')): ?>
+			        <div class="col-md-12" id="slider-novidades-container">
+			            <?php echo do_shortcode('[brasa_slider name="Novidades"]');?>
+			        </div><!-- #slider-novidades.col-md-12 -->
+			    <?php endif;?>
 
 			<?php else : ?>
 			<?php if(!is_page_template('page-embed.php')):?>
@@ -115,11 +120,6 @@
 			                    <div class="col-md-12" id="conceito-content">
 			                    	<?php echo apply_filters('the_content', $conceito->post_content); ?>
 			                    </div><!-- #conceito-content.col-md-12 -->
-			                <?php endif;?>
-			                <?php if(is_page() && is_page_template('page-home-alternativa.php')): ?>
-			                    <div class="col-md-12" id="slider-novidades-container">
-			                    	<?php echo do_shortcode('[brasa_slider name="Novidades"]');?>
-			                    </div><!-- #slider-novidades.col-md-12 -->
 			                <?php endif;?>
 						</div><!-- .container -->
 

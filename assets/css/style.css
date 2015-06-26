@@ -751,6 +751,9 @@ body.single .boas-praticas .entry-title {
 	width: 60px;
 }
 /* page-home-alternativa */
+#slider-novidades-container{
+	padding:0;
+}
 #slider-novidades-container .img-container{
 	height:210px;
 	overflow: hidden;
@@ -792,7 +795,7 @@ body.single .boas-praticas .entry-title {
 	content:'';
 }
 #slider-novidades-container .slick-prev{
-	display: none;
+	display: none !important;
 }
 section#acoes-section .container{
 	padding-top:10px;
