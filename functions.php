@@ -408,7 +408,7 @@ global $brasa_social_feed;
 $brasa_social_feed = new Brasa_Social_Feed(
 	array(
 		'youtube_auth'     => 'AIzaSyC5UL0Us0mOCh2wx_kkCi6JjEQ0niM_YiM',
-		'youtube_user'     => kirki_get_option('youtube_channel'),
+		'youtube_playlist' => kirki_get_option('youtube_playlist'),
 	)
 );
 

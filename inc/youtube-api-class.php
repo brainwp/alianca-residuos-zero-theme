@@ -43,26 +43,25 @@ class Brasa_Social_Feed{
 	public function get_youtube_posts($limit = 10){
 		$request_url = add_query_arg(
 			array(
-				'channelId'    => $this->args['youtube_user'],
-				'part'         => 'snippet,id&order=date',
+				'playlistId'   => $this->args['youtube_playlist'],
+				'part'         => 'snippet,id',
 				'maxResults'   => $limit,
 				'key'          => $this->args['youtube_auth']
 			),
-			'https://www.googleapis.com/youtube/v3/search/'
+			'https://www.googleapis.com/youtube/v3/playlistItems/'
 		);
 		if(isset($_POST['next_page']) && !empty($_POST['next_page'])){
 			$request_url = add_query_arg(
 				array(
-					'channelId'    => $this->args['youtube_user'],
-					'part'         => 'snippet,id&order=date',
+					'playlistId'    => $this->args['youtube_playlist'],
+					'part'         => 'snippet,id',
 					'maxResults'   => $limit,
 					'key'          => $this->args['youtube_auth'],
 					'pageToken'    => $_POST['next_page']
 				),
-				'https://www.googleapis.com/youtube/v3/search/'
+				'https://www.googleapis.com/youtube/v3/playlistItems/'
 			);
 		}
-		$request_url = esc_url_raw($request_url);
 		$request = wp_remote_get( $request_url );
 		$response = json_decode( wp_remote_retrieve_body( $request ), true );
 		return $response;
@@ -80,7 +79,7 @@ class Brasa_Social_Feed{
 		if(!$posts || empty($posts))
 			wp_die();
 		foreach ($posts as $post) {
-			if($post['id']['kind'] != 'youtube#video')
+			if($post['snippet']['resourceId']['kind'] != 'youtube#video')
 				continue;
 
 			global $yt_post;

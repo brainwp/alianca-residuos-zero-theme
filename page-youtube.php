@@ -23,9 +23,11 @@ get_header(); ?>
 			</div><!-- #youtube-video.col-md-12 -->
 			<div id="youtube-feed"></div><!-- #youtube-feed -->
 			<div class="col-md-12 clear" style="height:1px"></div><!-- .col-md-12 clear -->
-			<a href="#" id="youtube-feed-btn" class="btn btn-primary" data-loading="<?php _e('Carregando..','odin');?>">
-				<?php _e('Carregar +','odin');?>
-			</a>
+			<div class="col-md-12 text-center">
+				<a href="#" id="youtube-feed-btn" class="btn btn-primary" data-loading="<?php _e('Carregando..','odin');?>">
+					<?php _e('Carregar +','odin');?>
+				</a>
+			</div><!-- .col-md-12 text-center -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

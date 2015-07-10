@@ -951,6 +951,18 @@ body.post-type-archive-links{
 	background: url( '../images/bg-noticias.jpg' ) repeat-x center top #dacf93;
 }
 /* Youtube */
+#youtube-feed-btn{
+	text-align: center;
+	color:#FFF !important;
+	font-family: "Lato",sans-serif;
+	background-color: #496849;
+	border:0;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+#youtube-feed-btn:hover{
+	background-color: #344934;
+}
 .youtube.social-feed{
 	/*height:200px;*/
 	display: block;
