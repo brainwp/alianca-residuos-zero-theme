@@ -11,6 +11,8 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'each' ); ?>>
 
+	<a href="<?php echo get_permalink(); ?>" class="btn-mais"><?php _e( 'Leia mais', 'odin' ); ?></a>
+
 	<div class="col-md-12">
 		<div class="col-sm-12 col-md-4 thumb nopadding">
 			<?php if (has_post_thumbnail()): ?>
@@ -28,7 +30,6 @@
 			    <?php echo get_excerpt( get_the_content(), '700', ' ...' ); ?>
 		    <?php endif;?>
 		</div><!-- desc -->
-		<a href="<?php echo get_permalink(); ?>" class="mais"><?php _e( 'Leia mais', 'odin' ); ?></a>
 	</div><!-- row -->
 
 </article><!-- #post-## -->
