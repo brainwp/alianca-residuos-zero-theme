@@ -583,11 +583,14 @@ body.single .boas-praticas .entry-title {
 	text-align: left;
 	text-transform: uppercase;
 }
-.boas-praticas .each .mais {
+.boas-praticas.each, .boas-praticas .each {
+	position: relative;
+}
+.boas-praticas.each .btn-mais {
 	background-color: #496849;
-	bottom: 20px;
+	top: 200px;
 	color: #FFF;
-	right: 45px;
+	right: 25px;
 	padding: 3px 10px;
 	text-transform: uppercase;
 	-webkit-border-radius: 5px;
@@ -597,10 +600,9 @@ body.single .boas-praticas .entry-title {
 	position: absolute;
 	z-index: 998;
 }
-.boas-praticas .each .mais:hover {
+.boas-praticas.each .btn-mais:hover {
 	background-color: #15641A;
 }
-
 
 
 /* #Footer */
