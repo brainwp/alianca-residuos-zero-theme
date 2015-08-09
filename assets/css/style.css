@@ -5,7 +5,10 @@ Description: Odin main stylesheet.
 /*responsive menu */
 .tinynav { display: none }
 @media screen and (max-width: 600px) {
-    .tinynav { display: block }
+    .tinynav {
+    	display: block;
+		margin: 20px auto;
+    }
     #nav { display: none }
     ul.navbar-nav{
     	display: none;
@@ -15,6 +18,9 @@ Description: Odin main stylesheet.
     }
     .collapse{
     	text-align: center !important;
+    }
+    .form-group {
+    	float: left;
     }
 }
 .collapse{
