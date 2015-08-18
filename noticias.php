@@ -12,7 +12,12 @@ get_header(); ?>
 		<main id="main-content" class="site-main noticias" role="main">
 
 			<?php
-				$noticias = new WP_Query('posts_per_page=10');
+				$args = array(
+					'post_type'			=> 'post',
+					'posts_per_page' 	=> get_option('posts_per_page'),
+					'paged'				=> get_query_var( 'paged', 1 )
+				);
+				$noticias = new WP_Query( $args );
 				if ( $noticias->have_posts() ) :
 					// Start the Loop.
 					while ( $noticias->have_posts() ) : $noticias->the_post();
@@ -28,7 +33,7 @@ get_header(); ?>
 					wp_reset_postdata();
 
 					// Post navigation.
-					odin_paging_nav();
+					echo odin_pagination( 2, 1, false, $noticias );
 
 				else :
 					// If no content, include the "No posts found" template.
