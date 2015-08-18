@@ -34,6 +34,7 @@ assets/js/main.min.js
 odin.zip
 
 sftp-config.json
+sftp-config-alt.json
 *.zip
 wp-config.php
 wp-config*
