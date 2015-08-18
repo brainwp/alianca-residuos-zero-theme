@@ -1074,3 +1074,12 @@ body.post-type-archive-links{
 		text-align: center;
 	}
 }
+/*pagination*/
+.pagination > li > a, ul.page-numbers > li > a, .pagination > li > span, ul.page-numbers > li > span{
+	color: #496849 !important;
+}
+ul.page-numbers > li > span.current, ul.page-numbers > li > span.current:hover, ul.page-numbers > li > span.current:focus{
+	background: #496849;
+	color:#FFF !important;
+	border-color:#496849;
+}
