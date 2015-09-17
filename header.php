@@ -132,4 +132,6 @@
 
 		</header><!-- #header -->
 
+		<?php get_template_part( 'parts/filtros' ); ?>
+
 		<div id="main" class="site-main row">

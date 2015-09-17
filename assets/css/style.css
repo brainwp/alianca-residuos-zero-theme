@@ -1083,3 +1083,62 @@ ul.page-numbers > li > span.current, ul.page-numbers > li > span.current:hover, 
 	color:#FFF !important;
 	border-color:#496849;
 }
+
+
+/* Filtros */
+.filtros {
+	background-color: #f9f9f9;
+	font-family: 'Lato',sans-serif;
+	padding-bottom: 30px;
+	width: 100%;
+}
+.filtros header {
+	background-color: #FFF;
+	display: block;
+	font-weight: lighter;
+	margin-bottom: 30px;
+	overflow: hidden;
+	text-align: center;
+	text-transform: uppercase;s 
+}
+.filtros header h1 {
+	color: #496849;
+	font-size: 1.5em;
+	margin-bottom: 20px;
+}
+.filtros span {
+	color: #666;
+	display: block;
+	margin-bottom: 8px;
+}
+.filtros select,
+.filtros input[type="search"],
+input[type="input"] {
+	border: 1px solid #CCC;
+}
+.filtros select {
+	border-radius: 4px;
+	color: #333;
+	cursor: pointer;
+	margin-bottom: 15px;
+	padding: 5px;
+	width: 100%;
+}
+.filtros input[type="search"] {
+	border-radius: 4px;
+	color: #496849;
+	margin-bottom: 13px;
+	padding: 5px 10px;
+	width: 100%;	
+}
+.filtros .input-search {
+	background: url( '../images/lupa-filtros.png' ) 90% center no-repeat;
+	background-size: 20px;
+    color: #333;
+    background-color: #FFF;
+    border-color: #CCC;
+    padding-right: 32px;
+}
+.filtros .input-search:hover {
+	background-color: #FFF;
+}
