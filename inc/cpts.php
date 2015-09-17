@@ -128,6 +128,9 @@ add_action( 'init', 'brasa_custom_types', 0 );
 }
 
 function filter_query_agenda($query){
+	if( is_admin() )
+		return;
+
     if ( $query->is_main_query() && is_post_type_archive('agenda') ) {
         $query->set( 'orderby', 'meta_value' );
         $query->set( 'meta_key', 'agenda_data' );
@@ -144,7 +147,22 @@ function filter_query_agenda($query){
 		$query->set('meta_query', $meta);
 
     }
+    if ( is_page() && is_page_template('agenda-antigos.php') && $query->get('post_type') == 'agenda' && $query->get('posts_per_page') == get_option('posts_per_page') ) {
+        $query->set( 'orderby', 'meta_value' );
+        $query->set( 'meta_key', 'agenda_data' );
+        $query->set( 'order', 'DESC' );
 
+        $current = current_time('Ymd');
+        $meta = array();
+        $meta[] = array(
+			'key' => 'agenda_data',
+			'compare' => '<',
+			'value' => $current
+		);
+
+		$query->set('meta_query', $meta);
+
+    }
     if ( $query->is_main_query() && is_post_type_archive('links') ) {
     	$query->set( 'posts_per_page', -1 );
     }
