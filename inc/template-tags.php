@@ -91,3 +91,27 @@ if ( ! function_exists( 'odin_paging_nav' ) ) {
 		echo odin_pagination( $mid, $end, false );
 	}
 }
+if ( ! function_exists( 'get_filter_taxonomy_slug' ) ) {
+
+	function get_filter_taxonomy_slug() {
+		if ( is_page() && is_page_template('noticias.php') ) {
+			return 'category';
+		}
+		$type = get_post_type();
+		if ( $type == 'biblioteca' ) {
+			return 'category_biblioteca';
+		}
+		if ( $type == 'entidades' ) {
+			return 'category_entidades';
+		}
+		if ( $type == 'boas-praticas' ) {
+			return 'category_boas_praticas';
+		}
+		if ( $type == 'agenda' ) {
+			return 'category_agenda';
+		}
+		if ( $type == 'post' ) {
+			return 'category';
+		}
+	}
+}

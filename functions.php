@@ -236,7 +236,7 @@ function odin_enqueue_scripts() {
 
 	// Main jQuery.
 	wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array(), null, true );
-	wp_localize_script( 'odin-main', 'odin', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+	wp_localize_script( 'odin-main', 'odin', array( 'ajax_url' => admin_url( 'admin-ajax.php' ), 'sub_level_select' => __('Escolha uma Sub-Categoria', 'odin')  ) );
 
 	// Grunt watch livereload in the browser.
 	// wp_enqueue_script( 'odin-livereload', 'http://localhost:35729/livereload.js?snipver=1', array(), null, true );
@@ -431,3 +431,37 @@ function redirect_agenda() {
     wp_redirect( get_post_type_archive_link( 'agenda' ), 301 );
     exit;
 }
+
+//ajax filtros cpts
+function ajax_brasa_filters_sub_level() {
+	$first_level_term = get_term_by( 'slug', $_POST['category'], $_POST['taxonomy'], OBJECT, false );
+	$terms = get_terms( array($_POST['taxonomy']), array('parent' => $first_level_term->term_id ) );
+ 	if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+ 		foreach ( $terms as $term ) {
+ 			printf( '<option value="%s">%s</option>', $term->slug, $term->name );
+       	}
+    }
+    else{
+    	echo 'false';
+    }
+    die();
+}
+add_action( 'wp_ajax_brasa_filters_sub_level', 'ajax_brasa_filters_sub_level' );
+add_action( 'wp_ajax_nopriv_brasa_filters_sub_level', 'ajax_brasa_filters_sub_level' );
+
+function brasa_advanced_search_query_key( $query ) {
+    if ( $query->is_main_query() ) {
+    	if ( isset( $_GET['advanced_search'] ) && !empty( $_GET['advanced_search'] ) ) {
+        	$query->set( 's', $_GET['advanced_search'] );
+        }
+    }
+    if ( is_page() && is_page_template( 'noticias.php' ) && $query->get( 'post_type' ) == 'post' ) {
+    	if ( isset( $_GET['advanced_search'] ) && !empty( $_GET['advanced_search'] ) ) {
+        	$query->set( 's', $_GET['advanced_search'] );
+    	}
+       	if ( isset( $_GET['category'] ) && !empty( $_GET['category'] ) ) {
+       		$query->set( 'category_name', $_GET['category'] );
+       	}
+    }
+}
+add_action( 'pre_get_posts', 'brasa_advanced_search_query_key' );

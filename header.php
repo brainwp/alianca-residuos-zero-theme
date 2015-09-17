@@ -131,7 +131,10 @@
 
 
 		</header><!-- #header -->
-
-		<?php get_template_part( 'parts/filtros' ); ?>
-
+		<?php if ( is_post_type_archive() && get_post_type() != 'links') : ?>
+			<?php get_template_part( 'parts/filtros' ); ?>
+		<?php endif;?>
+		<?php if ( is_page() && is_page_template( 'noticias.php' ) ) : ?>
+			<?php get_template_part( 'parts/filtros' ); ?>
+		<?php endif;?>
 		<div id="main" class="site-main row">

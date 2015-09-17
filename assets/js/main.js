@@ -103,4 +103,59 @@ jQuery(document).ready(function($) {
 	    header: 'Menu', // String: Specify text for "header" and show header instead of the active item
 	    indent: '- ', // String: Specify text for indenting sub-items
 	});
+	//open advanced search
+	$('#open-search-advanced').on('click', function(e){
+		if( $(this).attr('data-open') == 'false' ){
+
+			$('#toggle-search').removeClass('slideOutDown');
+			$('section.filtros').addClass('open');
+			$('#toggle-search').addClass('open fadeInUp');
+			$(this).attr('data-open','true');
+		}
+		else{
+			$('section.filtros').removeClass('open');
+			$('#toggle-search').addClass('slideOutDown');
+			$('#toggle-search').removeClass('open fadeInUp');
+			$(this).attr('data-open','false');
+		}
+	});
+
+	$('#filter-first-level').on('change', function(e){
+		$('#loading-sub-level').removeClass('show');
+		$('#filter-sub-level').removeClass('show');
+
+		var value = $(this).val();
+		if ( value == '' ) {
+			return;
+		}
+		$('#filter-hidden-tax').attr('value',value);
+		$('#loading-sub-level').addClass('show');
+		var data = {
+			'action': 'brasa_filters_sub_level',
+			'category': value,
+			'taxonomy': $('#filter-hidden-tax').attr('name')
+		};
+		$.post(odin.ajax_url, data, function(response) {
+			$('#loading-sub-level').removeClass('show');
+			if ( response == 'false' ) {
+				$('#ajaxerror-sub-level').addClass('show');
+				setTimeout( function(){
+					$('#ajaxerror-sub-level').removeClass('show');
+				}, 4000);
+			}
+			else{
+				$('#filter-sub-level').html('');
+				$('#filter-sub-level').append('<option value="">'+odin.sub_level_select+'</option>');
+				$('#filter-sub-level').append( response );
+				$('#filter-sub-level').addClass('show');
+			}
+		});
+	});
+	$('#filter-sub-level').on('change', function(e){
+		var value = $(this).val();
+		if ( value == '' ) {
+			return;
+		}
+		$('#filter-hidden-tax').attr('value',value);
+	});
 });
