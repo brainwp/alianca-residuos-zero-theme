@@ -6,7 +6,7 @@
 
 get_header(); ?>
 
-	<h1 class="noticias-title"><?php _e( 'Agenda - Eventos Passadoss', 'odin' ); ?></h1>
+	<h1 class="noticias-title"><?php _e( 'Agenda - Eventos Passados', 'odin' ); ?></h1>
 
 	<div id="primary" class="col-md-12">
 		<main id="main-content" class="site-main agenda" role="main">
